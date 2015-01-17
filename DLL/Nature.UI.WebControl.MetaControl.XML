@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.UI.WebControl.MetaControl</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.UI.WebControl.MetaControl.Form.BaseForm">
+            <summary>
+            表单控件和查询控件的基类控件
+            表单布局部分
+            </summary>
+            <summary>
+            表单控件和查询控件的基类，事件部分
+            </summary>
+            <summary>
+            表单控件和查询控件的基类控件
+            属性和外部函数部分
+            定义字典
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl">
+            <summary>
+            表单控件、查询控件和数据列表控件的基类
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.Create">
+            <summary>
+            根据属性，实例化需要的数据
+            </summary>
+            user:jyk
+            time:2012/9/12 14:46
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.ModuleID">
+            <summary>
+            获取或者设置模块ID
+            </summary>
+            <value>
+            模块ID
+            </value>
+            user:jyk
+            time:2012/9/5 10:18
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.PageViewID">
+            <summary>
+            获取或者设置页面视图ID
+            </summary>
+            <value>
+            模块ID
+            </value>
+            user:jyk
+            time:2012/9/5 10:18
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.DalCollection">
+            <summary>
+            访问数据库的实例的集合，四个
+            </summary>
+            <value>
+            访问数据库的实例的集合
+            </value>
+            user:jyk
+            time:2012/9/13 10:52
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.PageViewMeta">
+            <summary>
+            获取或者设置页面视图的元数据
+            </summary>
+            <value>
+            页面视图的元数据
+            </value>
+            user:jyk
+            time:2012/9/5 10:57
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.PageViewColumnMeta">
+            <summary>
+            页面里的字段的元数据的集合
+            </summary>
+            <value>
+            字段的元数据的集合
+            </value>
+            user:jyk
+            time:2012/9/12 14:42
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.ManagerMeta">
+            <summary>
+            管理元数据，加载列表、表单元数据的实体类
+            </summary>
+            <value>
+            模块ID
+            </value>
+            user:jyk
+            time:2012/9/5 10:18
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.ManagerData">
+            <summary>
+            表单控件需要的添加、修改、提取数据用的
+            </summary>
+            <value>
+            模块ID
+            </value>
+            user:jyk
+            time:2012/9/5 10:18
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.CanUseColumns">
+            <summary>
+            可以使用的字段，1,2,3 的形式
+            </summary>
+            <value>
+            可以使用的字段，1,2,3 的形式
+            </value>
+            user:jyk
+            time:2012/9/5 10:18
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.MyDataBoundControl.UserOnlineInfo">
+            <summary>
+            当前登录人的信息
+            </summary>
+            <value>
+            用户在线信息
+            </value>
+            user:jyk
+            time:2012/9/5 10:18
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.CreateChildControls">
+            <summary>
+            加载子控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.ShowForm">
+            <summary>
+            显示表单
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.SetStartTd(Nature.MetaData.Entity.IColumn)">
+            <summary>
+            设置开始的TD
+            </summary>
+            <param name="formColumnMeta">字段的描述</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.SetEndTd(Nature.MetaData.Entity.MetaControl.FormColumnMeta)">
+            <summary>
+            设置一个字段占用几个TD
+            </summary>
+            <param name="bInfo">字段的描述</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.SetTDcolspan(Nature.MetaData.Entity.MetaControl.FormColumnMeta)">
+            <summary>
+            设置一个字段占用几个TD
+            </summary>
+            <param name="bInfo">字段的描述</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.SetStartTr(System.Int32,Nature.MetaData.Entity.MetaControl.FormColumnMeta)">
+            <summary>
+            设置是否显示开始的 TR
+            </summary>
+            <param name="index">循环的序号</param>
+            <param name="bInfo">字段的描述</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.SetEndTr(System.Int32,Nature.MetaData.Entity.MetaControl.FormColumnMeta)">
+            <summary>
+            设置是否显示结束的 TR
+            </summary>
+            <param name="index">循环的序号</param>
+            <param name="bInfo">字段的描述</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            控制设计时的页面。
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.MetaControl.Form.BaseForm.EventFormBinded">
+            <summary>
+            事件用
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.OnFormBinded(System.Object,System.EventArgs)">
+            <summary>
+            用户单击页号后，触发的事件，在绑定显示数据的控件之前触发
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.RaisePostBackEvent(System.String)">
+            <summary>
+            实现接口 
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.MetaControl.Form.BaseForm.DicBaseCols">
+            <summary>
+            存放列表用的字段的描述信息，key：字段ID，value：GridColumnsInfo
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.MetaControl.Form.BaseForm.DicColumnsValue">
+            <summary>
+            记录字段的值。key：字段ID，value：字段值
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.SetControlValue(System.String,System.String)">
+            <summary>
+            通过ColumnID修改控件值
+            </summary>
+            <param name="columnID">字段ID</param>
+            <param name="value">字段值</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.GetControlValue(System.String)">
+            <summary>
+            通过ColumnID获取控件值
+            </summary>
+            <param name="columnID">字段ID</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.GetControl(System.String)">
+            <summary>
+            通过ColumnID获取控件实例
+            </summary>
+            <param name="columnID">字段ID</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.ControlToEntity``1(``0)">
+            <summary>
+            自动给实体类的属性赋值
+            </summary>
+            <typeparam name="T">实体类的类型</typeparam>
+            <param name="t">实例</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.EntityToControl``1(``0)">
+            <summary>
+            把实体类的属性值设置给控件
+            </summary>
+            <typeparam name="T">实体类的类型</typeparam>
+            <param name="t">实例</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.Form.BaseForm.GetInputValue">
+            <summary>
+            获取用户输入的数据，用 dic_ColumnsValue来装载
+            </summary>
+        </member>
+        <member name="E:Nature.UI.WebControl.MetaControl.Form.BaseForm.FormBinded">
+             <summary>
+             用户单击页号后，触发的事件，在绑定显示数据的控件之前触发
+             </summary>
+            [Description("表单的里控件，绑定数据之后触发。修改模式有效")]
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.BaseForm.ManagerFormColumnMeta">
+            <summary>
+             表单用的Meta
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.BaseForm.ControlKind">
+            <summary>
+            控件的状态，表单控件or查询控件
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.BaseForm.RepeatColumns">
+            <summary>
+            显示几列。默认一列。
+            相当于DataList的 RepeatColumns 属性
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.BaseForm.IsGetCustomerData">
+            <summary>
+            是否已经获取过用户输入的信息
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.BaseForm.FirstChildControlClinetID">
+            <summary>
+            第一个子控件的ClinetID
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.BaseForm.NewDataID">
+            <summary>
+            获取新添加记录的主键ID值
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.Form.BaseForm.DataID">
+            <summary>
+            记录的主键ID值
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.MetaControl.FindForm">
+            <summary>
+            查询控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.FindForm.OnInit(System.EventArgs)">
+            <summary>
+            设置标志
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.FindForm.CreateChildControls">
+            <summary>
+            加载子控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.FindForm.GetSearchWhere">
+            <summary>
+            获取查询条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.FindForm.ResultsKind">
+            <summary>
+            查询条件的格式：SQL语句，参数化SQL语句
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.MetaControl.DataForm">
+            <summary>
+            表单控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataForm.CreateChildControls">
+            <summary>
+            创建子控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataForm.SaveData">
+            <summary>
+            保存数据。如果保存成功则返回空字符串，如果不成功，返回说明信息。
+            如果是添加数据，成功的话，可以使用 DataID 获得新纪录的主键值（限于SQL数据库、自增ID）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataForm.LoadData">
+            <summary>
+            填充数据，准备修改和显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataForm.Reset">
+            <summary>
+            重置表单控件里子控件的内容
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.DataForm.OpenButonType">
+            <summary>
+            打开页面视图的按钮的类型
+            1：查看；2：添加数据；3：修改数据；4：添加后修改；5：查询；11：超链接
+            </summary>
+            <value>
+             1：查看；2：添加数据；3：修改数据；4：添加后修改；5：查询；11：超链接
+            </value>
+            user:jyk
+            time:2012/9/12 15:04
+        </member>
+        <member name="T:Nature.UI.WebControl.MetaControl.OperationButtonBar">
+            <summary>
+            按钮组
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.OperationButtonBar.CreateChildControls">
+            <summary>
+            加载子控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.OperationButtonBar.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            设计时支持
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.OperationButtonBar.DalCollection">
+            <summary>
+            访问数据库的实例的集合，四个
+            </summary>
+            <value>
+            访问数据库的实例的集合
+            </value>
+            user:jyk
+            time:2012/9/13 10:52
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.OperationButtonBar.PageViewMeta">
+            <summary>
+            获取或者设置页面视图的元数据
+            </summary>
+            <value>
+            页面视图的元数据
+            </value>
+            user:jyk
+            time:2012/9/5 10:57
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.OperationButtonBar.ModuleID">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.OperationButtonBar.PageViewID">
+            <summary>
+            视图ID
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.MetaControl.OperationButtonBar.UserCanUseButtonID">
+            <summary>
+            设置权限，当前用户对于指定的模块可以使用的按钮ID集合
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.MetaControl.DataGridList">
+            <summary>
+            专门显示数据的控件
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.MetaControl.DataGridList.DicGridCols">
+            <summary>
+            存放列表用的字段的描述信息，key：字段ID，value：GridColumnMeta  ColumnMeta
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataGridList.DataBind">
+            <summary>
+            绑定数据
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataGridList.WriteTable(System.Text.StringBuilder,System.Boolean)">
+            <summary>
+            输出主体表格
+            </summary>
+            <param name="html">拼接的HTML</param>
+            <param name="isLock">是否锁定行列</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataGridList.BindbyDataTable(System.Text.StringBuilder,System.Data.DataTable,System.Int32[])">
+            <summary>
+            用DataTable绑定列表
+            </summary>
+            <param name="html">拼接table的 HTML.</param>
+            <param name="dt">DataTable格式的数据源</param>
+            <param name="columnIDs">用户角色允许查看的字段ID（列）</param>
+            user:jyk
+            time:2012/9/5 14:10
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataGridList.BindbyDictionary(System.Text.StringBuilder,System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.Dictionary{System.Int32,System.Object}},System.Int32[])">
+            <summary>
+            Bindbies the dictionary.
+            </summary>
+            <param name="html">拼接table的 HTML.</param>
+            <param name="dic">Dictionary 格式的数据源</param>
+            <param name="columnIDs">用户角色允许查看的字段ID（列）</param>
+            user:jyk
+            time:2012/9/5 14:11
+        </member>
+        <member name="M:Nature.UI.WebControl.MetaControl.DataGridList.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            设计时支持
+            </summary>
+            <param name="output"></param>
+        </member>
+    </members>
+</doc>

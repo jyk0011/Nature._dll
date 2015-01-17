@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.Service.DataBase</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.Service.BaseAshxMeta">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nature.Service.BaseAshxMeta.GetPageViewMeta(System.Int32)">
+            <summary>
+            Gets the page view meta.
+            </summary>
+            user:jyk
+            time:2012/10/10 11:07
+        </member>
+        <member name="M:Nature.Service.BaseAshxMeta.CheckUser(System.Collections.Generic.IList{Nature.DebugWatch.NatureDebugInfo})">
+            <summary>
+            坚持当前访问者是否登录。
+            两种情况：
+            1、登录页面：这个不能检查，所以做个钩子，登录页面重新函数搞定
+            2、其他页面：已登录页面，需要检查了，放在基类里，子类省事了。
+            </summary>
+        </member>
+        <member name="P:Nature.Service.BaseAshxMeta.Dal">
+            <summary>
+            数据访问函数库的实例的集合
+            </summary>
+            user:jyk
+            time:2012/10/8 14:14
+        </member>
+        <member name="P:Nature.Service.BaseAshxMeta.PageViewMeta">
+            <summary>
+            当前节点的描述信息
+            </summary>
+        </member>
+        <member name="P:Nature.Service.BaseAshxMeta.MyUser">
+            <summary>
+            当前登录人的一些信息，和权限相关的信息
+            </summary>
+            user:jyk
+            time:2013/2/5 14:25
+        </member>
+        <member name="T:Nature.Service.CommonClass">
+            <summary>
+            实例化数据访问函数库的各个实例
+            验证URL里的参数
+            </summary>
+            user:jyk
+            time:2012/11/12 16:09
+        </member>
+        <member name="M:Nature.Service.CommonClass.SetMetadataDal">
+            <summary>
+            设置连接元数据所在的数据库的实例
+            </summary>
+        </member>
+        <member name="T:Nature.Service.Data.DataDelete">
+            <summary>
+            删除数据的服务
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Data.DataDelete.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            删除数据的服务
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Nature.Service.Data.DataDelete.Physically(System.Web.HttpContext,System.Text.StringBuilder,Nature.Data.DalCollection)">
+            <summary>
+            获取指定的一条记录
+            </summary>
+            <param name="context">The context.</param>
+            <param name="json">The json.</param>
+            <param name="dal"> </param>
+            user:jyk
+            time:2012/10/27 10:05
+        </member>
+        <member name="M:Nature.Service.Data.DataDelete.Logic(System.Web.HttpContext,System.Text.StringBuilder,Nature.Data.DalCollection)">
+            <summary>
+            逻辑删除
+            </summary>
+            <param name="context">The context.</param>
+            <param name="json">The json.</param>
+            <param name="dal">访问数据库的实例，可能是元数据，可能是客户数据库 </param>
+            user:jyk
+            time:2012/10/27 10:02
+        </member>
+        <member name="T:Nature.Service.Data.DataBaseConnInfo">
+            <summary>
+            访问数据库的连接字符串和驱动名称
+            </summary>
+            user:jyk
+            time:2013/3/7 11:17
+        </member>
+        <member name="T:Nature.Service.Data.GetData">
+            <summary>
+            获取指定页面列表视图里的记录，带分页和查询
+            </summary>
+            user:jyk
+            time:2012/10/10 8:58
+        </member>
+        <member name="M:Nature.Service.Data.GetData.GetUserInfo(System.Text.StringBuilder)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="json">The json.</param>
+            user:jyk
+            time:2012/10/27 10:05
+        </member>
+        <member name="M:Nature.Service.Data.GetData.GetDataOne(System.Text.StringBuilder)">
+            <summary>
+            获取指定的一条记录
+            </summary>
+            <param name="json">The json.</param>
+            user:jyk
+            time:2012/10/27 10:05
+        </member>
+        <member name="M:Nature.Service.Data.GetData.GetDataListSource(System.Text.StringBuilder,Nature.Data.DataAccessLibrary,System.Boolean,System.Boolean)">
+            <summary>
+            获取多条记录
+            </summary>
+            <param name="json">The json.</param>
+            <param name="dal">访问数据库的实例，可能是元数据，可能是客户数据库 </param>
+            <param name="useColID">是否使用字段编号作为字段名称 </param>
+            <param name="useKeyValue">是否使用key-value形式，字段编号作为key </param>
+            user:jyk
+            time:2012/10/27 10:02
+        </member>
+        <member name="M:Nature.Service.Data.GetData.GetDataListAll(System.Text.StringBuilder,Nature.Data.DataAccessLibrary,System.Boolean,System.Boolean)">
+            <summary>
+            获取全部记录
+            </summary>
+            <param name="json">The json.</param>
+            <param name="dal">访问数据库的实例，可能是元数据，可能是客户数据库 </param>
+            <param name="useColID">是否使用字段编号作为字段名称 </param>
+            <param name="useKeyValue">是否使用key-value形式，字段编号作为key </param>
+            user:jyk
+            time:2012/10/27 10:02
+        </member>
+        <member name="T:Nature.Service.Data.GetID">
+            <summary>
+            获取ID + 随机数 ，用于上传图片的预订ID
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Data.GetID.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            获取ID + 随机数 ，用于上传图片的预订ID
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Nature.Service.Data.PostData">
+            <summary>
+            服务之保存数据
+            </summary>
+        </member>
+        <member name="T:Nature.Upload.UploadFile">
+            <summary>
+            上传文件的共用页面
+            </summary>
+        </member>
+        <member name="F:Nature.Upload.UploadFile.ControlID">
+            <summary>
+            控件ID
+            </summary>
+        </member>
+        <member name="F:Nature.Upload.UploadFile.ColID">
+            <summary>
+            字段ID
+            </summary>
+        </member>
+        <member name="F:Nature.Upload.UploadFile.FileExt">
+            <summary>
+            文件扩展名
+            </summary>
+        </member>
+        <member name="M:Nature.Upload.UploadFile.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nature.Service.Data.UploadHandler">
+            <summary>
+            上传文件的共用页面，这个是要改的，没弄好。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Data.UploadHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            接受上传的文件
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Nature.Service.MetaData.GetMeta">
+            <summary>
+            获取元数据
+            </summary>
+        </member>
+        <member name="M:Nature.Service.MetaData.GetMeta.Process">
+            <summary>
+            
+            </summary>
+            user:jyk
+            time:2012/10/18 17:41
+            user:jyk
+            time:2013/1/12 10:33
+        </member>
+        <member name="M:Nature.Service.MetaData.GetMeta.GetControlExtend(System.Text.StringBuilder,System.Boolean,System.Int32)">
+            <summary>
+            表单控件的扩展信息
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2012/10/23 9:31
+        </member>
+        <member name="T:Nature.Service.MetaData.PostMeta">
+            <summary>
+            元数据记录的排序
+            </summary>
+            user:jyk
+            time:2013/3/9 14:16
+        </member>
+        <member name="M:Nature.Service.MetaData.PostMeta.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            元数据记录的排序
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Nature.Service.PlugIn.LoadDll">
+            <summary>
+            动态加载dll
+            </summary>
+        </member>
+    </members>
+</doc>

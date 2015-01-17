@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.Service.UserCenter.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.Service.UserCenter.Model.UserRegInfo">
+            <summary>
+            用户的注册信息
+            </summary>
+            user:jyk
+            time:2013/3/2 13:22
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserRegInfo.UserSSOID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserRegInfo.UserAppID">
+            <summary>
+            web应用用户ID
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserRegInfo.UserCode">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserRegInfo.UserLoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserRegInfo.LoginPsw">
+            <summary>
+            登录密码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserRegInfo.SecondAuthPsw">
+            <summary>
+            关键操作密码
+            </summary>
+        </member>
+        <member name="T:Nature.Service.UserCenter.Model.UserSsoInfo">
+            <summary>
+            用户在Sso的信息
+            </summary>
+            user:jyk
+            time:2013/3/2 13:22
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.UserSSOID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.UserCode">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.UserLoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.TrueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.Photo">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.IDCard">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.BankCardNumber">
+            <summary>
+            银行卡号
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserSsoInfo.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:Nature.Service.UserCenter.Model.UserInfoSendtoSSO">
+            <summary>
+            app端提交的用户信息
+            </summary>
+            user:jyk
+            time:2013/3/8 13:52
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.TrueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.Photo">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.IDCard">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Nature.Service.UserCenter.Model.UserInfoSendtoSSO.BankCardNumber">
+            <summary>
+            银行卡号
+            </summary>
+        </member>
+    </members>
+</doc>

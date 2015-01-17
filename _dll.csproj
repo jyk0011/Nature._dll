@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A09BADB-129F-4543-A415-156BF239D230}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_dll</RootNamespace>
+    <AssemblyName>_dll</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\de\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="DLL\FredCK.FCKeditorV2.dll" />
+    <Content Include="DLL\Nature.BaseWebform.dll" />
+    <Content Include="DLL\Nature.BaseWebform.pdb" />
+    <Content Include="DLL\Nature.BaseWebform.XML" />
+    <Content Include="DLL\Nature.Client.SSOWebApp.dll" />
+    <Content Include="DLL\Nature.Client.SSOWebApp.pdb" />
+    <Content Include="DLL\Nature.Client.SSOWebApp.XML" />
+    <Content Include="DLL\Nature.Client.UserCenter.dll" />
+    <Content Include="DLL\Nature.Client.UserCenter.pdb" />
+    <Content Include="DLL\Nature.Client.UserCenter.XML" />
+    <Content Include="DLL\Nature.Common.dll" />
+    <Content Include="DLL\Nature.Common.pdb" />
+    <Content Include="DLL\Nature.Common.XML" />
+    <Content Include="DLL\Nature.DataAccessLibrary.dll" />
+    <Content Include="DLL\Nature.DataAccessLibrary.pdb" />
+    <Content Include="DLL\Nature.DataAccessLibrary.XML" />
+    <Content Include="DLL\Nature.MetaData.dll" />
+    <Content Include="DLL\Nature.MetaData.pdb" />
+    <Content Include="DLL\Nature.MetaData.XML" />
+    <Content Include="DLL\Nature.RoleManage.dll" />
+    <Content Include="DLL\Nature.RoleManage.pdb" />
+    <Content Include="DLL\Nature.RoleManage.XML" />
+    <Content Include="DLL\Nature.Service.DataBase.dll" />
+    <Content Include="DLL\Nature.Service.DataBase.pdb" />
+    <Content Include="DLL\Nature.Service.DataBase.XML" />
+    <Content Include="DLL\Nature.Service.dll" />
+    <Content Include="DLL\Nature.Service.pdb" />
+    <Content Include="DLL\Nature.Service.SSOAuth.dll" />
+    <Content Include="DLL\Nature.Service.SSOAuth.pdb" />
+    <Content Include="DLL\Nature.Service.SSOAuth.XML" />
+    <Content Include="DLL\Nature.Service.UserCenter.dll" />
+    <Content Include="DLL\Nature.Service.UserCenter.Model.dll" />
+    <Content Include="DLL\Nature.Service.UserCenter.Model.pdb" />
+    <Content Include="DLL\Nature.Service.UserCenter.Model.XML" />
+    <Content Include="DLL\Nature.Service.UserCenter.pdb" />
+    <Content Include="DLL\Nature.Service.UserCenter.XML" />
+    <Content Include="DLL\Nature.Service.XML" />
+    <Content Include="DLL\Nature.UI.WebControl.BaseControl.dll" />
+    <Content Include="DLL\Nature.UI.WebControl.BaseControl.pdb" />
+    <Content Include="DLL\Nature.UI.WebControl.BaseControl.XML" />
+    <Content Include="DLL\Nature.UI.WebControl.MetaControl.dll" />
+    <Content Include="DLL\Nature.UI.WebControl.MetaControl.pdb" />
+    <Content Include="DLL\Nature.UI.WebControl.MetaControl.XML" />
+    <Content Include="DLL\Nature.UI.WebControl.QuickPager.dll" />
+    <Content Include="DLL\Nature.UI.WebControl.QuickPager.pdb" />
+    <Content Include="DLL\Nature.UI.WebControl.QuickPager.XML" />
+    <Content Include="DLL\Nature.UI.WebControl.QuickPagerSQL.dll" />
+    <Content Include="DLL\Nature.UI.WebControl.QuickPagerSQL.pdb" />
+    <Content Include="DLL\Nature.UI.WebControl.QuickPagerSQL.XML" />
+    <Content Include="DLL\Nature.User.dll" />
+    <Content Include="DLL\Nature.User.pdb" />
+    <Content Include="DLL\Nature.User.XML" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="服务的类图.cd" />
+    <Content Include="项目引用关系.dgml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NatureFrameWork\Nature.BaseWebform\Nature.BaseWebform.csproj">
+      <Project>{2831c826-642f-48e8-b5b4-23be1323cf98}</Project>
+      <Name>Nature.BaseWebform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.Common\Nature.Common.csproj">
+      <Project>{55dc3025-75a9-441c-9d75-7652e46900f5}</Project>
+      <Name>Nature.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.DataAccessLibrary\Nature.DataAccessLibrary.csproj">
+      <Project>{75bc6e2b-b380-4cfb-baf2-ba7c568e1778}</Project>
+      <Name>Nature.DataAccessLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.MetaData\Nature.MetaData.csproj">
+      <Project>{98c10895-982d-4b38-a5c9-c0b2552ff3f7}</Project>
+      <Name>Nature.MetaData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.UI.WebControl.BaseControl\Nature.UI.WebControl.BaseControl.csproj">
+      <Project>{62b7e147-fb87-4162-80da-e74416c0a06f}</Project>
+      <Name>Nature.UI.WebControl.BaseControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.UI.WebControl.MetaControl\Nature.UI.WebControl.MetaControl.csproj">
+      <Project>{c737e143-4b8f-45aa-a0dd-11fd907b0b83}</Project>
+      <Name>Nature.UI.WebControl.MetaControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.UI.WebControl.QuickPagerSQL\Nature.UI.WebControl.QuickPagerSQL.csproj">
+      <Project>{7ca14f8e-b552-40b7-b979-3710a49a8741}</Project>
+      <Name>Nature.UI.WebControl.QuickPagerSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.UI.WebControl.QuickPager\Nature.UI.WebControl.QuickPager.csproj">
+      <Project>{69052650-70b7-47f2-b281-b038fe26757b}</Project>
+      <Name>Nature.UI.WebControl.QuickPager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureFrameWork\Nature.User\Nature.User.csproj">
+      <Project>{a620e323-e2b4-4767-bff6-95b9b713758d}</Project>
+      <Name>Nature.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureModule\CommonModule\RoleManage\RoleManage.csproj">
+      <Project>{75389597-1613-4091-b95c-d245bb71979d}</Project>
+      <Name>RoleManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureServer\Nature.Server\Nature.Service.csproj">
+      <Project>{05c7da1f-28fe-44c5-8571-b59af5ac4431}</Project>
+      <Name>Nature.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureServer\Nature.Service.DataBase\Nature.Service.DataBase.csproj">
+      <Project>{e2b27077-010e-4aa1-8b81-6985be754665}</Project>
+      <Name>Nature.Service.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureSSO\Nature.Client.SSOWebApp\Nature.Client.SSOWebApp.csproj">
+      <Project>{cb82c2aa-852d-4e37-a47c-641f9854234f}</Project>
+      <Name>Nature.Client.SSOWebApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureSSO\Nature.Client.UserCenter\Nature.Client.UserCenter.csproj">
+      <Project>{f19f9583-6fcd-4012-a88e-71cd09e0e60c}</Project>
+      <Name>Nature.Client.UserCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureSSO\Nature.Service.SSOAuth\Nature.Service.SSOAuth.csproj">
+      <Project>{3eedcc4b-1395-4a24-891c-cff42bea7089}</Project>
+      <Name>Nature.Service.SSOAuth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NatureSSO\Nature.Service.UserCenter\Nature.Service.UserCenter.csproj">
+      <Project>{39ca2250-2b28-4e0d-b338-57ab6df5290e}</Project>
+      <Name>Nature.Service.UserCenter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6117</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

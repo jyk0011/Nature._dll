@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.RoleManage</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.CommonModule.Role.GetRoleData">
+            <summary>
+            修改角色时用，获取角色模块信息
+            </summary>
+            user:jyk
+            time:2012/11/28 14:11
+        </member>
+        <member name="M:Nature.CommonModule.Role.GetRoleData.GetModuleID(System.Web.HttpContext,System.Text.StringBuilder)">
+            <summary>
+             获取角色的模块ID
+            </summary>
+            <param name="context">The context.</param>
+            <param name="role">The json.</param>
+            user:jyk
+            time:2012/11/28 10:05
+        </member>
+        <member name="T:Nature.CommonModule.Role.PostRoleData">
+            <summary>
+            接收客户端提交的数据，ajax post方式
+            </summary>
+        </member>
+        <member name="M:Nature.CommonModule.Role.PostRoleData.ProcessRequest(System.Web.HttpContext)">
+            user:jyk
+            time:2012/12/8 10:41
+        </member>
+        <member name="T:Nature.CommonModule.Role.RoleInfoManage">
+            <summary>
+            角色到模块、按钮等的添加、修改
+            </summary>
+            user:jyk
+            time:2012/11/12 13:20
+        </member>
+        <member name="M:Nature.CommonModule.Role.RoleInfoManage.RoleAddUser(System.Web.HttpContext,System.Diagnostics.Stopwatch,Nature.Data.DataAccessLibrary,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="sw"></param>
+            <param name="dal"></param>
+            <param name="addUserID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nature.CommonModule.Role.RoleInfoExtend">
+            <summary>
+            角色相关信息的实体类
+            </summary>
+            user:jyk
+            time:2012/11/14 13:52
+        </member>
+        <member name="M:Nature.CommonModule.Role.RoleInfoExtend.#ctor(System.Web.HttpContext)">
+            <summary>
+            初始化，从URL参数里获取实例的值
+            </summary>
+            <param name="context">The context.</param>
+            user:jyk
+            time:2012/11/14 14:12
+        </member>
+        <member name="M:Nature.CommonModule.Role.RoleInfoExtend.IsInt(System.Web.HttpContext,System.String)">
+            <summary>
+            验证是否是整数
+            </summary>
+            <param name="context">当前上下文</param>
+            <param name="name">参数名称</param>
+            <returns></returns>
+            user:jyk
+            time:2012/11/14 14:23
+        </member>
+        <member name="M:Nature.CommonModule.Role.RoleInfoExtend.IsIdString(System.Web.HttpContext,System.String)">
+            <summary>
+            验证是否是id串
+            </summary>
+            <param name="context">当前上下文</param>
+            <param name="name">参数名称</param>
+            <returns></returns>
+            user:jyk
+            time:2012/11/14 14:23
+        </member>
+        <member name="P:Nature.CommonModule.Role.RoleInfoExtend.RoleID">
+            <summary>
+            角色ID
+            </summary>
+            user:jyk
+            time:2012/11/14 13:55
+        </member>
+        <member name="P:Nature.CommonModule.Role.RoleInfoExtend.UseModuleIDs">
+            <summary>
+            角色可以看到的模块ID集合。1,2,3 形式，汇总模块ID
+            </summary>
+            user:jyk
+            time:2012/11/14 13:55
+        </member>
+        <member name="P:Nature.CommonModule.Role.RoleInfoExtend.UnUseModuleIDs">
+            <summary>
+            角色里不能看到的模块ID集合。1,2,3形式，汇总模块ID
+            </summary>
+            user:jyk
+            time:2012/11/14 13:55
+        </member>
+        <member name="P:Nature.CommonModule.Role.RoleInfoExtend.ButtonIDs">
+            <summary>
+            角色的模块ID的按钮ID集合。1,2,3形式
+            key:模块ID，
+            value：按钮ID集合。
+            </summary>
+            user:jyk
+            time:2012/11/14 14:47
+        </member>
+        <member name="P:Nature.CommonModule.Role.RoleInfoExtend.Error">
+            <summary>
+            错误信息
+            </summary>
+            user:jyk
+            time:2012/11/14 14:17
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.BaseWebform</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.BaseWebform.PageUserInfo">
+            <summary>
+            用户相关操作。
+            验证是否登录
+            获取当前登录人的信息。
+            获取BaseUserInfo的实例
+            权限验证的两个函数：验证FunctionID是否正确，验证FunctionID、ButtonID是否匹配
+            </summary>
+        </member>
+        <member name="T:Nature.BaseWebform.BasePage">
+            <summary>
+            后台管理的页面基类。定义数据访问的实例
+            设置皮肤的路径，css的文件名
+            生成数据访问函数库的实例:
+            1、访问客户数据
+            2、访问元数据
+            3、访问角色
+            4、访问用户
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePage.OnInit(System.EventArgs)">
+            <summary>
+            设置当前登录人的信息
+            设置元数据的数据库的实例
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Nature.BaseWebform.BasePage.SkinPath">
+            <summary>
+            皮肤的路径
+            </summary>
+        </member>
+        <member name="P:Nature.BaseWebform.BasePage.CssTree">
+            <summary>
+            树的Css
+            </summary>
+        </member>
+        <member name="P:Nature.BaseWebform.BasePage.CssWebGrid">
+            <summary>
+            列表页面里用的Css
+            </summary>
+        </member>
+        <member name="P:Nature.BaseWebform.BasePage.CssWebForm">
+            <summary> 
+            表单页面里用的Css
+            </summary>
+        </member>
+        <member name="P:Nature.BaseWebform.BasePage.Dal">
+            <summary>
+            访问数据库的实例的集合，四个
+            </summary>
+            <value>
+            访问数据库的实例的集合
+            </value>
+            user:jyk
+            time:2012/9/13 10:52
+        </member>
+        <member name="F:Nature.BaseWebform.PageUserInfo.MyUser">
+            <summary>
+            保存当前登录人的一些信息
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageUserInfo.OnInit(System.EventArgs)">
+            <summary>
+            设置当前登录人的信息
+            设置元数据的数据库的实例
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.PageUserInfo.SaveViewLog">
+            <summary>
+            记录用户的浏览页面的记录
+            </summary>
+        </member>
+        <member name="T:Nature.BaseWebform.BasePageDelete">
+            <summary>
+            删除数据的页面基类
+            </summary>
+        </member>
+        <member name="T:Nature.BaseWebform.PageURL">
+            <summary>
+            处理URL参数
+            接收URL传递过来的模块ID，大部分页面都需要使用这个ID
+            </summary>
+            <summary>
+            获取URL传递过来的信息，进行验证。
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.ModuleID">
+            <summary>
+            ModuleID，功能节点ID
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.MasterPageViewID">
+            <summary>
+            OpenPageViewID，主视图ID：列表视图ID，或者表单视图ID
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.FindPageViewID">
+            <summary>
+            FindPageViewID，查询视图ID
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.DataID">
+            <summary>
+            接收URL传递过来的记录ID，用于显示、修改、删除、查询数据
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.DataIDs">
+            <summary>
+            接收URL传递过来的记录ID，用于显示、修改、删除、查询数据
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.ButtonID">
+            <summary>
+             按钮ID，用于是否可用按钮的验证
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.DepartmentID">
+            <summary>
+            部门ID。string.Empty 表示没有传递参数
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.ForeignID">
+            <summary>
+            foreign key column 外键ID。string.Empty 表示没有传递参数
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.ForeignIDs">
+            <summary>
+            foreign key column 外键ID。string.Empty 表示没有传递参数
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.PageViewMeta">
+            <summary>
+            当前节点的描述信息
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.PageURL.LblTitle">
+            <summary>
+            页面里的标题
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.OnInit(System.EventArgs)">
+            <summary>
+            提取URL里面的参数，验证参数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.OnLoad(System.EventArgs)">
+            <summary>
+            清除IE缓存
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetPageTitle">
+            <summary>
+            设置标题
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetModuleID">
+            <summary>
+            设置ModuleID。通过URL参数 mid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetMasterPageViewID">
+            <summary>
+            设置主列表视图ID。通过URL参数 mpvid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetFindPageViewID">
+            <summary>
+            设置查询视图ID。通过URL参数 fid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetDataID">
+            <summary>
+            设置DataID。通过URL参数 id 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetButtonID">
+            <summary>
+            设置ButtonID。通过URL参数 bid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetDepartmentID">
+            <summary>
+            验证部门ID
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.PageURL.SetForeignID">
+            <summary>
+            验证外键。通过URL参数 frid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageDelete.OnInit(System.EventArgs)">
+            <summary>
+            通过FunctionID和buttonID来验证。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageDelete.SetDataID">
+            <summary>
+            验证DataID。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageDelete.CheckCanDelete">
+            <summary>
+            验证是否可以删除记录
+            </summary>
+        </member>
+        <member name="T:Nature.BaseWebform.BasePageForm">
+            <summary>
+            表单页面的基类，可以在这里定义一些公用的控件，保存按钮、表单控件。
+            权限控制（部分），控件的属性设置。
+            </summary>
+            <summary>
+            表单的基类
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageForm.BtnSave">
+            <summary>
+            保存按钮
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageForm.BtnSaveContinue">
+            <summary>
+            保存后可以继续添加的按钮
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageForm.FrmCommonForm">
+            <summary>
+            表单控件
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageForm.LblMsg">
+            <summary>
+            显示添加是否成功。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.OnInit(System.EventArgs)">
+            <summary>
+            表单页面，设置控件的属性，验证是否可以访问指定的记录
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.OnLoad(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.Initialization">
+            <summary>
+            第一次访问要做的事情，设置表单控件的属性，和按钮。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.OnPreLoad(System.EventArgs)">
+            <summary>
+            设置lbl_Msg。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.SetKind">
+            <summary>
+            通过ButtonID，设置表单的操作方式，添加、修改、查看
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.SetFormControlInfo">
+            <summary>
+            设置表单控件需要的属性和事件，FunctionID、ControlKind、SetDataID
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.SetFormControlInfo(Nature.UI.WebControl.MetaControl.DataForm)">
+            <summary>
+            设置表单控件的属性
+            </summary>
+            <param name="form">表单控件</param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.FrmCommonFormFormBinded(System.Object,System.EventArgs)">
+            <summary>
+            表单控件绑定后触发的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.BtnSaveClick(System.Object,System.EventArgs)">
+            <summary>
+            添加、修改记录，添加后关闭
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.BtnSaveContinueClick(System.Object,System.EventArgs)">
+            <summary>
+            添加、修改记录，添加后可以继续添加新纪录
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.SetButtonInfo">
+            <summary>
+            设置流程按钮的属性和事件
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.SetDataID">
+            <summary>
+            验证DataID。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.SetButtonID">
+            <summary>
+            验证表单页面与ButtonID是否匹配，防止伪造URL。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageForm.CheckCanUpdate">
+            <summary>
+            验证是否可以修改记录
+            </summary>
+        </member>
+        <member name="T:Nature.BaseWebform.BasePageList">
+            <summary>
+            列表页面的基类
+            </summary>
+            <summary>
+            列表的基类。给共用控件设置属性和事件。
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageList.CtlCommonButtonBar">
+            <summary>
+            按钮组，功能（操作）按钮
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageList.CtlCommonFind">
+            <summary>
+            查询控件
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageList.CtlCommonGrid">
+            <summary>
+            显示数据用的控件
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageList.CtlCommonPager">
+            <summary>
+            分页用的控件
+            </summary>
+        </member>
+        <member name="F:Nature.BaseWebform.BasePageList.BtnSearch">
+            <summary>
+            查询按钮
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.OnInit(System.EventArgs)">
+            <summary>
+            在 OnInit 事件里面设置各个自定义控件的属性和关联
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetQuickPagerInfo">
+            <summary>
+            从元数据里提取信息，设置分页控件的属性
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.LoadPagerInfo(Nature.UI.WebControl.QuickPager.QuickPager,Nature.Data.IDal,System.Int32)">
+            <summary>
+            从元数据里面提取分页用的信息，给分页控件设置属性
+            </summary>
+            <param name="myPager"></param>
+            <param name="dal">连接配置信息所在的数据库的实例</param>
+            <param name="moduleID">模块ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetGridInfo">
+            <summary>
+            设置显示数据控件的属性
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetGridInfo(System.Web.UI.WebControls.DataBoundControl)">
+            <summary>
+            设置数据显示控件实例的属性
+            </summary>
+            <param name="grid">数据显示控件MyGrid</param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetFindControlInfo">
+            <summary>
+            设置查询控件的属性
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetFindControlInfo(Nature.UI.WebControl.MetaControl.FindForm)">
+            <summary>
+            设置查询控件的属性
+            </summary>
+            <param name="find">查询控件的实例</param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.BtnSearchClick(System.Object,System.EventArgs)">
+            <summary>
+            查询按钮触发的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetButtonBarInfo">
+            <summary>
+            设置按钮组
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetDataID">
+            <summary>
+            验证DataID。列表页面DataID不是必须传递的参数。
+            </summary>
+        </member>
+        <member name="M:Nature.BaseWebform.BasePageList.SetMasterPageViewID">
+            <summary>
+            验证列表页面与FunctionID是否匹配
+            </summary>
+        </member>
+    </members>
+</doc>

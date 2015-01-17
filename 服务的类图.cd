@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Nature.Service.Ashx.BaseAshx">
+    <Position X="6.5" Y="6" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.MyWebClient">
+    <Position X="0.5" Y="5.75" Width="4.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.URLParam">
+    <Position X="0.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.Data.GetData">
+    <Position X="3" Y="18.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.Data.PostData">
+    <Position X="0.75" Y="18.25" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.MetaData.GetMeta">
+    <Position X="5.5" Y="18.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.Permissions.PermissionsAuthority">
+    <Position X="13" Y="18.25" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.Permissions.PermissionsFilter">
+    <Position X="10.5" Y="18.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.SSOAuth.SsoAuth">
+    <Position X="9" Y="21" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.SSOAuth.SsoManage">
+    <Position X="11.25" Y="7" Width="4.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.UserCenter.UserService">
+    <Position X="7.75" Y="18.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Service.CommonClass">
+    <Position X="3" Y="1.5" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Client.SSOApp.WebApp">
+    <Position X="6.75" Y="3.75" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Client.UserCenter.UserReg">
+    <Position X="17.25" Y="3.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Client.UserCenter.RevRegUserV">
+    <Position X="6.5" Y="12" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Nature.Client.UserCenter.UserClientHelp">
+    <Position X="11.25" Y="3.5" Width="3.25" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

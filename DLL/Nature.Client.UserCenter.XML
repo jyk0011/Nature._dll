@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.Client.UserCenter</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.Client.UserCenter.UserReg">
+            <summary>
+            用户的注册信息
+            </summary>
+            user:jyk
+            time:2013/3/9 9:26
+        </member>
+        <member name="F:Nature.Client.UserCenter.UserReg.UserIDapp">
+            <summary>
+            用户ID（网站应用端）
+            </summary>
+            user:jyk
+            time:2013/3/9 9:27
+        </member>
+        <member name="F:Nature.Client.UserCenter.UserReg.UserCode">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="F:Nature.Client.UserCenter.UserReg.UserLoginName">
+            <summary>
+            登录账户
+            </summary>
+        </member>
+        <member name="T:Nature.Client.UserCenter.RevRegUserV">
+            <summary>
+            接收用户中心发过来的用户信息，注册，并且返回新用户的ID，必须是int类型。
+            </summary>
+        </member>
+        <member name="M:Nature.Client.UserCenter.RevRegUserV.SaveUser(Nature.Client.UserCenter.UserReg)">
+            <summary>
+            保存用户注册信息，返回异常信息
+            如果成功，返回string.Empty ，否则返回错误描述信息
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/3/9 9:20
+        </member>
+        <member name="T:Nature.Client.UserCenter.UserClientHelp">
+            <summary>
+            用户中心客户端(网站应用)的帮助类
+            </summary>
+            user:jyk
+            time:2013/3/2 16:02
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.SendRegUser(Nature.Service.UserCenter.Model.UserRegInfo,System.String)">
+            <summary>
+            向用户中心发送用户的注册信息，用户ID、用户名、登录账户、网站ID，返回登录密码和二次鉴权密码
+            </summary>
+            <param name="userReg">用户注册信息</param>
+            <param name="userID">当前登录人ID</param>
+            <returns>操作是否成功。""：成功；其他：不成功原因</returns>
+            user:jyk
+            time:2013/3/2 16:04
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.CheckLoginName(System.String,System.String)">
+            <summary>
+            验证登录账户是否重复
+            </summary>
+            <param name="userLoginName">要检查版本的（本地）用户ID</param>
+            <param name="userID">当前登录人ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.GetUserNewVer(System.String,System.String)">
+            <summary>
+            获取用户中心里指定的用户的最新版本
+            </summary>
+            <param name="userIDapp">要检查版本的（本地）用户ID</param>
+            <param name="userID">当前登录人ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.GetUserNewInfo(System.String,System.String,Nature.Service.UserCenter.Model.UserSsoInfo@)">
+            <summary>
+            获取用户中心里指定的用户的最新信息
+            </summary>
+            <param name="userIDapp">要获取信息的（本地）用户ID</param>
+            <param name="userID">当前登录人ID</param>
+            <param name="userSsoInfo">用户中心的用户信息 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.SendUserNewInfo(Nature.Service.UserCenter.Model.UserInfoSendtoSSO,System.String,System.String)">
+            <summary>
+            向用户中心提交用户信息
+            </summary>
+            <param name="userInfo">要修改的用户的信息</param>
+            <param name="operatorID">登录人ID</param>
+            <param name="userIDapp">要修改的用户在本地的ID</param>
+            <returns></returns>
+            user:jyk
+            time:2013/3/8 10:18
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.UpdatePsw(System.String,System.String,System.String,System.String)">
+            <summary>
+            修改用户的登录密码
+            </summary>
+            <param name="serIDapp">用户在本地的ID </param>
+            <param name="pswOld">原来的登录密码</param>
+            <param name="pswNew">新的登录密码</param>
+            <param name="userID">当前登录人ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.UpdateAuthPsw(System.String,System.String,System.String,System.String)">
+            <summary>
+            修改用户的入口密码
+            </summary>
+            <param name="serIDapp">用户在本地的ID </param>
+            <param name="pswOld">原来的登录密码</param>
+            <param name="pswNew">新的登录密码</param>
+            <param name="userID">当前登录人ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.UpdateUserState(System.String,System.String,System.String)">
+            <summary>
+            修改用户状态
+            </summary>
+            <param name="serIDapp">用户在本地的ID </param>
+            <param name="state">原来的登录密码</param>
+            <param name="userID">当前登录人ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.MySend(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},Nature.Service.URLParam)">
+            <summary>
+            内部的发送信息的封装函数
+            </summary>
+            <param name="action">请求的动作</param>
+            <param name="operatorID">登录人ID</param>
+            <param name="postVar">提交的form信息</param>
+            <param name="param">url里的参数 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.UserCenter.UserClientHelp.MyGetData(System.String,System.Collections.Generic.Dictionary{System.String,System.String},Nature.Service.URLParam)">
+            <summary>
+            内部的发送信息的封装函数
+            </summary>
+            <param name="userID">登录人ID</param>
+            <param name="postVar">提交的form信息</param>
+            <param name="param">url的参数 </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

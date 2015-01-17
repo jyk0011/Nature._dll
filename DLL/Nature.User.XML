@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.User</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.User.UserOnlineInfo">
+            <summary>
+            在线用户的相关信息
+            </summary>
+            user:jyk
+            time:2013/2/2 15:58
+        </member>
+        <member name="P:Nature.User.UserOnlineInfo.DAL">
+            <summary>
+            数据访问类库的实例
+            </summary>
+        </member>
+        <member name="P:Nature.User.UserOnlineInfo.BaseUser">
+            <summary>
+            用户的基本信息
+            </summary>
+            user:jyk
+            time:2013/2/2 15:56
+        </member>
+        <member name="P:Nature.User.UserOnlineInfo.UserPermission">
+            <summary>
+            用户的相关权限
+            </summary>
+            user:jyk
+            time:2013/2/2 15:56
+        </member>
+        <member name="T:Nature.User.BaseUserInfo">
+            <summary>
+            记录用户的登录信息，用户ID、人员ID， 所在部门等
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserInfo.UserID">
+            <summary>
+            用户账号的ID，一个人可以有多个账号。每个账号都可以有不同的角色、权限
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserInfo.UserCode">
+            <summary>
+            用户账号，一个人可以有多个账号。每个账号都可以有不同的角色、权限
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserInfo.PersonID">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserInfo.PersonName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserInfo.DepartmentID">
+            <summary>
+            部门ID集合，数组形式。一个人可以在多个部门
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserInfo.DepartmentName">
+            <summary>
+            人员所在部门的名称
+            </summary>
+        </member>
+        <member name="T:Nature.User.ManageUser">
+            <summary>
+            管理登录、登出、是否登录，和保存用户状态
+            </summary>
+        </member>
+        <member name="F:Nature.User.ManageUser._userLoginSign">
+            <summary>
+            不同的项目使用不同的标识，以便于区分cookies，避免冲突
+            </summary>
+        </member>
+        <member name="F:Nature.User.ManageUser._userIDKey">
+            <summary>
+            加密的密钥
+            </summary>
+        </member>
+        <member name="M:Nature.User.ManageUser.#ctor">
+            <summary>
+            初始化，设置session的标识，以区分不同的项目
+            设置密钥。
+            </summary>
+        </member>
+        <member name="M:Nature.User.ManageUser.CreateUser(System.String)">
+            <summary>
+            创建用户实例
+            </summary>
+            <param name="userID">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.User.ManageUser.CreateUserInfoFormDataBase(System.String)">
+            <summary>
+            从数据库里面提取用户的一些信息
+            </summary>
+            <param name="userID">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.User.ManageUser.CreateUserPermissionFormDataBase(System.String)">
+            <summary>
+            从数据库里面提取用户的一些信息
+            </summary>
+            <param name="userID">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.User.ManageUser.LoadUserModuleID(Nature.User.BaseUserPermission)">
+            <summary>
+            加载用户可以访问的功能节点
+            </summary>
+            <param name="userInfo">用户的登录信息的实例</param>
+            <returns></returns>
+        </member>
+        <member name="P:Nature.User.ManageUser.Dal">
+            <summary>
+            访问数据库的实例的集合，四个
+            </summary>
+            user:jyk
+            time:2012/9/13 10:52
+        </member>
+        <member name="P:Nature.User.ManageUser.ErroeMessage">
+            <summary>
+            出错的时候，记录出错的描述
+            </summary>
+        </member>
+        <member name="P:Nature.User.ManageUser.UserInfo">
+            <summary>
+            存放用户的一些常用信息
+            </summary>
+        </member>
+        <member name="T:Nature.User.BaseUserPermission">
+            <summary>
+            记录用户的登录信息，用户ID、人员ID，角色，FunctionIDs等。
+            </summary>
+        </member>
+        <member name="M:Nature.User.BaseUserPermission.GetUserButtonID(System.Int32,Nature.Data.DataAccessLibrary)">
+            <summary>
+            当前用户可以使用指定模块的功能按钮
+            </summary>
+            <param name="moduleID">功能节点ID</param>
+            <param name="dal">元数据的实例</param>
+            <returns>返回用户可以访问的功能按钮ID的集合，半角逗号区分</returns>
+        </member>
+        <member name="M:Nature.User.BaseUserPermission.GetResourceListCastSQL(System.Int32,Nature.Data.DataAccessLibrary)">
+            <summary>
+            传入节点ID，返回当前登录人访问该节点需要设置的查询条件
+            </summary>
+            <param name="pvid">页面视图ID</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <returns>返回查询条件</returns>
+        </member>
+        <member name="M:Nature.User.BaseUserPermission.GetUserColumnIDs(System.Int32,Nature.Data.DataAccessLibrary)">
+            <summary>
+            获取当前用户对于指定的节点可以访问的字段
+            返回当前用户指定的节点可以访问的字段ID的集合，“1,2,3”的形式
+            </summary>
+            <param name="pageViewID">页面视图的ID</param>
+            <param name="dalMetadata">访问元数据的实例</param>
+            <returns>当前用户，指定节点，可以访问的字段ID的集合，“1,2,3”的形式</returns>
+        </member>
+        <member name="M:Nature.User.BaseUserPermission.CheckModuleID(System.String)">
+            <summary>
+            验证当前用户是否可以访问指定的功能模块
+            </summary>
+            <param name="moduleID">要验证的模块ID</param>
+        </member>
+        <member name="M:Nature.User.BaseUserPermission.CanUseModuleID(System.String)">
+            <summary>
+            验证当前用户是否可以访问指定的功能模块
+            </summary>
+            <param name="moduleID">要验证的模块ID</param>
+        </member>
+        <member name="M:Nature.User.BaseUserPermission.CheckButtonID(System.Int32,System.String,Nature.Data.DataAccessLibrary)">
+            <summary>
+            验证当前用户是否可以使用指定的按钮打开的页面
+            </summary>
+            <param name="moduleID">要验证的节点</param>
+            <param name="buttonID">要验证的按钮ID</param>
+            <param name="dal">元数据的实例</param>
+        </member>
+        <member name="M:Nature.User.BaseUserPermission.CheckCanUpdate(System.Int32,System.Int32,System.String,Nature.Data.DataAccessLibrary)">
+            <summary>
+            验证当前用户是否可以修改指定的记录
+            </summary>
+            <param name="moduleID">模块ID</param>
+            <param name="pageViewID">视图ID</param>
+            <param name="dataID">要判断的记录ID</param>
+            <param name="dalMetadata">访问元数据的实例</param>
+            <returns></returns>
+        </member>
+        <member name="P:Nature.User.BaseUserPermission.RoleID">
+            <summary>
+            用户的角色ID集合，数组的形式
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserPermission.RoleIDs">
+            <summary>
+            用户的角色ID ，字符串1,2,3的形式，半角逗号分隔
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserPermission.RoleVersion">
+            <summary>
+            角色的版本，当角色有变化的时候，依据这个标识来重新加载角色相关的信息
+            </summary>
+        </member>
+        <member name="P:Nature.User.BaseUserPermission.ModuleIDs">
+            <summary>
+            当前用户可以访问的节点ID集合，字符串的形式，半角逗号分隔。
+            </summary>
+        </member>
+    </members>
+</doc>

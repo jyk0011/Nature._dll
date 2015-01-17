@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.Client.SSOWebApp</name>
+    </assembly>
+    <members>
+        <member name="F:Nature.SSO.close.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:Nature.Client.SSOApp.AppConfig">
+            <summary>
+            网站应用端的配置信息类
+            </summary>
+            user:jyk
+            time:2013/1/30 8:50
+        </member>
+        <member name="P:Nature.Client.SSOApp.AppConfig.WebAppID">
+            <summary>
+            返回统一配置的网站应用ID
+            </summary>
+            user:jyk
+            time:2013/1/30 8:52
+        </member>
+        <member name="P:Nature.Client.SSOApp.AppConfig.SSOUrl">
+            <summary>
+            sso验证的网址，不带斜杠
+            </summary>
+            user:jyk
+            time:2013/1/30 8:52
+        </member>
+        <member name="P:Nature.Client.SSOApp.AppConfig.ResourceURL">
+            <summary>
+            元数据服务的网址
+            </summary>
+            user:jyk
+            time:2013/1/30 8:52
+        </member>
+        <member name="P:Nature.Client.SSOApp.AppConfig.DataServiceUrl">
+            <summary>
+            数据增删改查服务的网址
+            </summary>
+            user:jyk
+            time:2013/1/30 8:52
+        </member>
+        <member name="P:Nature.Client.SSOApp.AppConfig.AppKey">
+            <summary>
+            解密网站应用的票据的密钥
+            </summary>
+            user:jyk
+            time:2013/1/30 8:52
+        </member>
+        <member name="P:Nature.Client.SSOApp.AppConfig.IsWriteAjaxDebug">
+            <summary>
+            ajax登录时，客户端是否显示操作日志。True 显示；False不显示
+            </summary>
+            user:jyk
+            time:2013/1/30 8:52
+        </member>
+        <member name="P:Nature.Client.SSOApp.AppConfig.IsWriteSsoLog">
+            <summary>
+            服务器端是否写操作日志。True 写；False不写
+            </summary>
+            user:jyk
+            time:2013/1/30 8:52
+        </member>
+        <member name="T:Nature.Client.SSOApp.UserState">
+            <summary>
+            用户的登录状态
+            </summary>
+            user:jyk
+            time:2013/1/30 9:05
+        </member>
+        <member name="F:Nature.Client.SSOApp.UserState.NotLoginApp">
+            <summary>
+            0：没有登录app网站
+            </summary>
+            user:jyk
+            time:2013/1/30 9:09
+        </member>
+        <member name="F:Nature.Client.SSOApp.UserState.NormalAccess">
+            <summary>
+            1：可以正常访问
+            </summary>
+        </member>
+        <member name="F:Nature.Client.SSOApp.UserState.NotAccess">
+            <summary>
+            2：不可以访问
+            </summary>
+        </member>
+        <member name="F:Nature.Client.SSOApp.UserState.SuspendAccess">
+            <summary>
+            3：暂停访问
+            </summary>
+        </member>
+        <member name="F:Nature.Client.SSOApp.UserState.Locked">
+            <summary>
+            4：被锁定不可以访问。
+            </summary>
+        </member>
+        <member name="F:Nature.Client.SSOApp.UserState.LoginTimeout">
+            <summary>
+            5：登录超时
+            </summary>
+        </member>
+        <member name="T:Nature.Client.SSOApp.UserWebappInfo">
+            <summary>
+            用户在网站应用端的信息
+            </summary>
+            user:jyk
+            time:2013/1/23 15:54
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.GuidKey">
+            <summary>
+            同一个账户多人登录的区分标记
+            </summary>
+            user:jyk
+            time:2013/4/2 18:58
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.UserSsoID">
+            <summary>
+            用户在SSO端的用户ID
+            </summary>
+            user:jyk
+            time:2013/1/23 15:51
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.UserWebappID">
+            <summary>
+            用户在网站应用端的用户ID
+            </summary>
+            user:jyk
+            time:2013/1/23 15:51
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.IP">
+            <summary>
+            沟通包里IP
+            </summary>
+            user:jyk
+            time:2013/4/3 10:41
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.WebAppID">
+            <summary>
+            包里的网站ID
+            </summary>
+            user:jyk
+            time:2013/4/3 10:43
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.State">
+             <summary>
+             用户的访问状态
+            0：没有登录app网站
+            1：可以正常访问
+            2：不可以访问
+            3：暂停访问
+            4：被锁定不可以访问。
+            5：登录超时
+             </summary>
+             user:jyk
+             time:2013/1/30 9:04
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.Ticket">
+            <summary>
+            票据。保存生成的加密字符串，作为备案
+            </summary>
+            user:jyk
+            time:2013/1/23 15:55
+        </member>
+        <member name="P:Nature.Client.SSOApp.UserWebappInfo.Error">
+            <summary>
+            执行过程中是否出现异常，如果没有异常 返回 string.Empty；如果有异常，返回描述信息
+            </summary>
+            user:jyk
+            time:2013/3/26 14:05
+        </member>
+        <member name="T:Nature.Client.SSOApp.AppCookieManage">
+            <summary>
+            管理客户端的cookie
+            </summary>
+            user:jyk
+            time:2013/4/8 16:35
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppCookieManage.CreateAppCookie(Nature.Client.SSOApp.UserWebappInfo,System.String)">
+            <summary>
+            创建应用端的用户cookie
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/4/8 17:30
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppCookieManage.GetAppCookieValue">
+            <summary>
+            获取应用端的cookie的值 webappNtfwUserssoID
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/4/8 16:39
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppCookieManage.ClearAppCookie">
+            <summary>
+            清除应用端的cookie webappNtfwUserssoID
+            </summary>
+            user:jyk
+            time:2013/4/8 16:36
+        </member>
+        <member name="T:Nature.Client.SSOApp.AppManage">
+            <summary>
+            网站应用端的管理
+            </summary>
+            user:jyk
+            time:2013/1/29 18:32
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppManage.GetUserIDyCookies">
+            <summary>
+            获取当前访问者的信息。
+            前提：已经在本站登录。根据本地cookies生成
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/1/29 18:36
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppManage.UserWebappInfoByCookies">
+            <summary>
+            获取当前访问者的信息，询问sso用户状态
+            前提：已经在本站登录。根据本地cookies生成
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/1/29 18:36
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppManage.LoginApp(System.String,System.String,Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            在应用端做标记
+            </summary>
+            <param name="guid"></param>
+            <param name="miwen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppManage.Logout(System.String)">
+            <summary>
+            退出登录，清除本地cookie。跳页的方式退出sso
+            </summary>
+            <param name="reUrl">必须http://开头</param>
+            user:jyk
+            time:2013/3/26 18:25
+        </member>
+        <member name="M:Nature.Client.SSOApp.AppManage.WebformIslogin(Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            判断sso是否登录，如果没登录，跳转
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/3/26 14:07
+        </member>
+        <member name="T:Nature.Client.SSOApp.BaseAshx">
+            <summary>
+            sso访问的基类
+            </summary>
+            user:jyk
+            time:2013/1/28 14:46
+        </member>
+        <member name="M:Nature.Client.SSOApp.BaseAshx.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            通过实现 <see cref="T:System.Web.IHttpHandler"/> 接口的自定义 HttpHandler 启用 HTTP Web 请求的处理。
+            </summary>
+            <param name="context"><see cref="T:System.Web.HttpContext"/> 对象，它提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用。</param>
+            user:jyk
+            time:2013/1/28 14:46
+        </member>
+        <member name="P:Nature.Client.SSOApp.BaseAshx.UserSsoID">
+            <summary>
+            用户在SSO里的ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Client.SSOApp.BaseAshx.UserIP">
+            <summary>
+            请求访问的用户的IP
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Client.SSOApp.BaseAshx.CallBack">
+            <summary>
+            回调函数名
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Client.SSOApp.BaseAshx.IsReusable">
+            <summary>
+            获取一个值，该值指示其他请求是否可以使用 <see cref="T:System.Web.IHttpHandler"/> 实例。
+            </summary>
+            <returns>
+            如果 <see cref="T:System.Web.IHttpHandler"/> 实例可再次使用，则为 true；否则为 false。
+              </returns>
+            user:jyk
+            time:2013/1/28 14:48
+        </member>
+        <member name="T:Nature.Client.SSOApp.WebApp">
+            <summary>
+            单点登录，网站应用端的处理事件
+            </summary>
+        </member>
+        <member name="M:Nature.Client.SSOApp.WebApp.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            通过实现 <see cref="T:System.Web.IHttpHandler"/> 接口的自定义 HttpHandler 启用 HTTP Web 请求的处理。
+            </summary>
+            <param name="context"><see cref="T:System.Web.HttpContext"/> 对象，它提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用。</param>
+            user:jyk
+            time:2013/1/28 14:46
+            user:jyk
+            time:2013/4/8 16:44
+        </member>
+        <member name="T:Nature.Client.SSOLog.SsoLogJson">
+            <summary>
+            日志的类
+            </summary>
+            user:jyk
+            time:2013/3/28 14:28
+        </member>
+        <member name="F:Nature.Client.SSOLog.SsoLogJson.UserIDsso">
+            <summary>
+            用户在sso端的用户ID
+            </summary>
+            user:jyk
+            time:2013/3/29 10:07
+        </member>
+        <member name="F:Nature.Client.SSOLog.SsoLogJson.UserIDapp">
+            <summary>
+            用户在app端的用户ID
+            </summary>
+        </member>
+        <member name="F:Nature.Client.SSOLog.SsoLogJson.AppID">
+            <summary>
+            应用的标识
+            </summary>
+        </member>
+        <member name="F:Nature.Client.SSOLog.SsoLogJson.State">
+            <summary>
+            状态，成功还是失败
+            </summary>
+        </member>
+        <member name="F:Nature.Client.SSOLog.SsoLogJson.Msg">
+            <summary>
+            记录一些信息
+            </summary>
+        </member>
+        <member name="P:Nature.Client.SSOLog.SsoLogJson.Key">
+            <summary>
+            一个访问周期的标识
+            </summary>
+        </member>
+        <member name="T:Nature.Client.SSOLog.LogManage">
+            <summary>
+            记录登录日志。
+            记录到文件，text 。json格式。
+            {
+            userIDsso_时间_序号:{
+                    "time":"9:32",
+                    "userIDsso":"1",
+                    "userIDapp":"1",
+                    "appID":"4",
+                    "state":"成功|失败",
+                    "msg":"记录些描述"
+                },
+            ……
+            
+            }
+            </summary>
+            user:jyk
+            time:2013/3/28 13:41
+        </member>
+        <member name="F:Nature.Client.SSOLog.LogManage.Index">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nature.Client.SSOLog.LogManage.#cctor">
+            <summary>
+            静态类的初始化，判断文件夹是否建立
+            </summary>
+            user:jyk
+            time:2013/3/28 14:10
+        </member>
+        <member name="M:Nature.Client.SSOLog.LogManage.WriteOne(Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            写入日志
+            </summary>
+            user:jyk
+            time:2013/3/28 14:11
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.Service</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.Service.Ashx.BaseAshx">
+            <summary>
+            ashx的基类
+            </summary>
+            user:jyk
+            time:2012/10/18 17:37
+        </member>
+        <member name="T:Nature.Service.Ashx.HandlerBase">
+            <summary>
+            ashx的基类
+            </summary>
+            user:jyk
+            time:2012/10/18 17:37
+        </member>
+        <member name="F:Nature.Service.Ashx.HandlerBase.Context">
+            <summary>
+            保存 context ，不用作为参数传来传去了
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.HandlerBase.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            通过实现 <see cref="T:System.Web.IHttpHandler"/> 接口的自定义 HttpHandler 启用 HTTP Web 请求的处理。
+            </summary>
+            <param name="context"><see cref="T:System.Web.HttpContext"/> 对象，它提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用。</param>
+            user:jyk
+            time:2012/10/18 17:41
+        </member>
+        <member name="M:Nature.Service.Ashx.HandlerBase.ProcessEnd">
+            <summary>
+            结束访问时，应该调用这个
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.HandlerBase.SendDebug(System.Text.StringBuilder)">
+            <summary>
+            输出debug信息
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.HandlerBase.DebugDetail(System.Text.StringBuilder,Nature.DebugWatch.NatureDebugInfo)">
+            <summary>
+            输出debug子步骤信息
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.HandlerBase.Process">
+            <summary>
+            子类里实现处理方法，代替原来的 ProcessRequest 。模板模式
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.HandlerBase.Request">
+            <summary>
+            返回 context.Request 简化代码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.HandlerBase.Response">
+            <summary>
+            返回 context.Response 简化代码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.HandlerBase.Session">
+            <summary>
+            返回 context.Session 简化代码
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.HandlerBase.CallBack">
+            <summary>
+            回调函数的名称
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.Ashx.HandlerBase.BaseDebug">
+            <summary>
+            记录经历了哪些步骤、以及每个步骤的用时
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.HandlerBase.IsReusable">
+            <summary>
+            您将需要在您网站的 web.config 文件中配置此处理程序，
+            并向 IIS 注册此处理程序，然后才能进行使用。有关详细信息，
+            请参见下面的链接: http://go.microsoft.com/?linkid=8101007
+            </summary>
+        </member>
+        <member name="F:Nature.Service.Ashx.BaseAshx.ScriptAlert">
+            <summary>
+            字符串常量，返回alert的js脚本
+            </summary>
+            user:jyk
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.Process">
+            <summary>
+            
+            </summary>
+            user:jyk
+            time:2012/10/18 17:41
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.CheckUser(System.Collections.Generic.IList{Nature.DebugWatch.NatureDebugInfo})">
+            <summary>
+            坚持当前访问者是否登录。
+            两种情况：
+            1、登录页面：这个不能检查，所以做个钩子，登录页面重新函数搞定
+            2、其他页面：已登录页面，需要检查了，放在基类里，子类省事了。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.SetModuleID">
+            <summary>
+            设置ModuleID。通过URL参数 mid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.SetMasterPageViewID">
+            <summary>
+            设置主列表视图ID。通过URL参数 mpvid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.SetFindPageViewID">
+            <summary>
+            设置查询视图ID。通过URL参数 mpvid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.SetDataID">
+            <summary>
+            设置DataID。通过URL参数 id 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.SetButtonID">
+            <summary>
+            设置ButtonID。通过URL参数 bid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.SetDepartmentID">
+            <summary>
+            验证部门ID
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.SetForeignID">
+            <summary>
+            验证外键。通过URL参数 frid 获取。
+            </summary>
+        </member>
+        <member name="M:Nature.Service.Ashx.BaseAshx.ResponseWriteError(System.String)">
+            <summary>
+            没通过验证的返回信息。根据callback参数，返回适合的json
+            </summary>
+            user:jyk
+            time:2013/3/2 9:31
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.ModuleID">
+            time:2012/10/8 14:14
+            <summary>
+            ModuleID，功能节点ID
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.MasterPageViewID">
+            <summary>
+            OpenPageViewID，主视图ID：列表视图ID，或者表单视图ID。
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.FindPageViewID">
+            <summary>
+            OpenPageViewID，主视图ID：列表视图ID，或者表单视图ID。
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.DataID">
+            <summary>
+            接收URL传递过来的记录ID，用于显示、修改、删除、查询数据。
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.DataIDs">
+            <summary>
+            接收URL传递过来的记录ID集合，用于批量操作，比如批量删除、批量选择。
+            1,2,3的字符串形式
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.ButtonID">
+            <summary>
+             按钮ID，用于是否可用按钮的验证
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.DepartmentID">
+            <summary>
+            部门ID。string.Empty 表示没有传递参数
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.ForeignID">
+            <summary>
+             外键ID。string.Empty 表示没有传递参数。
+            改来改去，这个属性和DataID一致了，保留此属性是为了向下兼容
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.ForeignIDs">
+            <summary>
+            外键ID集合。string.Empty 表示没有传递参数。
+            1,2,3的字符串形式。第一个是最开始的DataID，最后一个是最近的一个外键
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.Action">
+            <summary>
+            动作名称
+            </summary>
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.DataBaseID">
+            <summary>
+            数据库ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.WebAppID">
+            <summary>
+            网站应用ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.WebAppIP">
+            <summary>
+            请求访问的网站应用的IP
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.UserSsoID">
+            <summary>
+            用户在SSO里的ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.UserAppID">
+            <summary>
+            用户在网站应用里的ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.Ashx.BaseAshx.UserIP">
+            <summary>
+            请求访问的用户的IP
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="T:Nature.Service.Ashx.Post">
+            <summary>
+            转发post申请
+            </summary>
+            user:jyk
+            time:2012/10/18 17:37
+        </member>
+        <member name="M:Nature.Service.Ashx.Post.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            通过实现 <see cref="T:System.Web.IHttpHandler"/> 接口的自定义 HttpHandler 启用 HTTP Web 请求的处理。
+            </summary>
+            <param name="context"><see cref="T:System.Web.HttpContext"/> 对象，它提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用。</param>
+            user:jyk
+            time:2012/10/18 17:41
+        </member>
+        <member name="T:Nature.Service.MyWebClient">
+            <summary>
+            对WebClient的封装
+            1、post的方式提交数据
+            2、接收信息，放在dictionary里面。
+            3、填充实体类
+            4、json转换成实体类
+            
+            </summary>
+            user:jyk
+            time:2013/2/2 9:06
+        </member>
+        <member name="M:Nature.Service.MyWebClient.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String@)">
+            <summary>
+            利用WebClient，实现post的方式，向指定的网址发送提交数据
+            </summary>
+            <param name="url">要访问的URL</param>
+            <param name="postVar">post提交的参数</param>
+            <param name="errorMsg">如果发生异常，返回异常信息</param>
+            <returns>url地址返回的信息</returns>
+            user:jyk
+            time:2013/2/2 9:32
+        </member>
+        <member name="M:Nature.Service.MyWebClient.PostAjax(System.String,System.String@)">
+            <summary>
+            利用WebClient，实现post的方式，向指定的网址发送提交数据
+            </summary>
+            <param name="url">要访问的URL，包括参数</param>
+            <param name="errorMsg">如果发生异常，返回异常信息</param>
+            <returns>url地址返回的信息</returns>
+            user:jyk
+            time:2013/2/2 9:32
+        </member>
+        <member name="M:Nature.Service.MyWebClient.RequestQueryString">
+            <summary>
+            接收当前页面接收到的信息form和QueryString，存放在字典里Dictionary。
+            key：name （表单里的控件的name属性值）
+            value：控件的值，string类型
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/2/5 11:08
+        </member>
+        <member name="M:Nature.Service.MyWebClient.RequestForm">
+            <summary>
+            接收当前页面接收到的信息form和QueryString，存放在字典里Dictionary。
+            key：name （表单里的控件的name属性值）
+            value：控件的值，string类型
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/2/5 11:08
+        </member>
+        <member name="M:Nature.Service.MyWebClient.FormToEntity``1(``0)">
+            <summary>
+            自动给实体类的属性赋值
+            </summary>
+            <typeparam name="T">实体类的类型</typeparam>
+            <param name="t">实例</param>
+        </member>
+        <member name="M:Nature.Service.MyWebClient.JsonToEntity``1(``0,System.String)">
+            <summary>
+            自动给实体类的属性赋值
+            </summary>
+            <typeparam name="T">实体类的类型</typeparam>
+            <param name="t">实例</param>
+            <param name="json">json格式的信息，转换成实体类</param>
+        </member>
+        <member name="M:Nature.Service.MyWebClient.EntityToDictionary``1(``0,System.String)">
+            <summary>
+            接收当前页面接收到的信息form和QueryString，存放在字典里Dictionary。
+            key：name （表单里的控件的name属性值）
+            value：控件的值，string类型
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/2/5 11:08
+        </member>
+        <member name="T:Nature.Service.URLParam">
+            <summary>
+            URL的常用参数
+            </summary>
+            user:jyk
+            time:2013/2/6 15:01
+        </member>
+        <member name="M:Nature.Service.URLParam.#ctor(System.Web.HttpContext)">
+            <summary>
+            初始化，根据url里的参数，自动给属性赋值。
+            </summary>
+            <param name="context">The context.如果为null，则不给属性赋值</param>
+            user:jyk
+            time:2013/2/27 14:27
+        </member>
+        <member name="M:Nature.Service.URLParam.ToURLParam(System.Boolean)">
+            <summary>
+            生成参数形式
+            </summary>
+            <returns></returns>
+            user:jyk
+            time:2013/2/6 15:28
+        </member>
+        <member name="P:Nature.Service.URLParam.WebAppID">
+            <summary>
+            网站应用ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.URLParam.WebAppIP">
+            <summary>
+            请求访问的网站应用的IP
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.URLParam.DataBaseID">
+            <summary>
+            要访问的数据库ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.URLParam.UserSsoID">
+            <summary>
+            用户在SSO里的ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.URLParam.UserAppID">
+            <summary>
+            用户在网站应用里的ID
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.URLParam.UserIP">
+            <summary>
+            请求访问的用户的IP
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.URLParam.Action">
+            <summary>
+            请求的动作
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+        <member name="P:Nature.Service.URLParam.ModuleID">
+            <summary>
+            ModuleID，模块ID
+            </summary>
+            time:2012/10/8 14:14
+        </member>
+        <member name="P:Nature.Service.URLParam.MasterPageViewID">
+            <summary>
+            OpenPageViewID，主视图ID：列表视图ID，或者表单视图ID
+            </summary>
+        </member>
+        <member name="P:Nature.Service.URLParam.FindPageViewID">
+            <summary>
+            OpenPageViewID，查询视图ID
+            </summary>
+        </member>
+        <member name="P:Nature.Service.URLParam.DataID">
+            <summary>
+            接收URL传递过来的记录ID，用于显示、修改、删除、查询数据
+            </summary>
+        </member>
+        <member name="P:Nature.Service.URLParam.ButtonID">
+            <summary>
+             按钮ID，用于是否可用按钮的验证
+            </summary>
+        </member>
+        <member name="P:Nature.Service.URLParam.DepartmentID">
+            <summary>
+            部门ID。string.Empty 表示没有传递参数
+            </summary>
+        </member>
+        <member name="P:Nature.Service.URLParam.CallBack">
+            <summary>
+            回调函数的名称
+            </summary>
+            user:jyk
+            time:2013/1/23 9:44
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.Service.SSOAuth</name>
+    </assembly>
+    <members>
+        <member name="F:Nature.Service._Default.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Nature.Service._Default.Button2">
+            <summary>
+            Button2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Nature.Service._Default.TextBox2">
+            <summary>
+            TextBox2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Nature.Service._Default.DropDownList1">
+            <summary>
+            DropDownList1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:Nature.Service.SSOAuth.SsoAuth">
+            <summary>
+            sso端的各种认证
+            </summary>
+        </member>
+        <member name="T:Nature.Service.SSOAuth.SSOToAppKeyManage">
+            <summary>
+            管理sso与app之间沟通的票据，采用application保存
+            </summary>
+            user:jyk
+            time:2013/3/28 11:16
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOToAppKeyManage.Add(System.String,Nature.Service.SSOAuth.UserSsoWebappVerifyInfo)">
+            <summary>
+            添加一个票据
+            </summary>
+            <param name="key">Guid的key，转成string</param>
+            <param name="userSsoInfo">票据类，用于验证</param>
+            user:jyk
+            time:2013/3/28 11:18
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOToAppKeyManage.Remove(System.String)">
+            <summary>
+            删除（去掉）一个票据
+            </summary>
+            <param name="key">Guid的key，转成string</param>
+            user:jyk
+            time:2013/3/28 11:18
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOToAppKeyManage.Get(System.String)">
+            <summary>
+            获取一个票据
+            </summary>
+            <param name="key">Guid的key，转成string</param>
+            user:jyk
+            time:2013/3/28 11:18
+        </member>
+        <member name="T:Nature.Service.SSOAuth.SsoManage">
+            <summary>
+            SSO的一个管理类，缓存票据，创建票据，获取票据等
+            </summary>
+            user:jyk
+            time:2013/1/21 14:31
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SsoManage.CreateUserSsoWebappVerifyInfo(System.Int32,Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            创建网站应用与sso交换用的认证信息
+            </summary>
+            <returns></returns>
+            <param name="webAppID">网站应用的ID</param>
+            <param name="ssoLog">写日志 </param>
+            <returns></returns>
+            user:jyk
+            time:2013/1/21 14:33
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SsoManage.CreateUserSsoInfo(System.String,System.Int32,Nature.Data.DataAccessLibrary,Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            创建SSO端用户凭证，在线用户
+            </summary>
+            <returns></returns>
+            <param name="webAppId">网站应用的ID</param>
+            <param name="userId">当前访问用户的ID</param>
+            <param name="dal">访问数据库的实例</param>
+            <param name="ssoLog">写日志的实例 </param>
+            <returns></returns>
+            user:jyk
+            time:2013/1/21 14:33
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SsoManage.CanContinueAccess(System.String,Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            清除过期的sso端的票据
+            </summary>
+            user:jyk
+            time:2013/2/16 9:06
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SsoManage.ClearSsoTicket">
+            <summary>
+            清除过期的sso端的票据
+            </summary>
+            user:jyk
+            time:2013/2/16 9:06
+        </member>
+        <member name="P:Nature.Service.SSOAuth.SsoManage.UserTimeOut">
+            <summary>
+            获取用户的超时时间
+            </summary>
+            user:jyk
+            time:2013/1/23 16:44
+        </member>
+        <member name="T:Nature.Service.SSOAuth.UserOneselfInfo">
+            <summary>
+            一个账号多人登录的区分标识
+            </summary>
+            user:jyk
+            time:2013/4/2 11:00
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserOneselfInfo.GuidKey">
+            <summary>
+            cookie里的标志。
+            </summary>
+            user:jyk
+            time:2013/4/2 13:31
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserOneselfInfo.UserSsoID">
+            <summary>
+            用户在SSO端的用户ID
+            </summary>
+            user:jyk
+            time:2013/1/23 15:51
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserOneselfInfo.CreateTime">
+            <summary>
+            创建时间，用于判断是否超时失效
+            用于清理无效信息
+            </summary>
+            user:jyk
+            time:2013/1/23 15:53
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserOneselfInfo.LastTime">
+            <summary>
+            最后访问时间
+            用于清理无效信息
+            </summary>
+            user:jyk
+            time:2013/1/23 15:53
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserOneselfInfo.UserIP">
+            <summary>
+            客户端IP
+            </summary>
+            user:jyk
+            time:2013/1/23 15:54
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserOneselfInfo.PasswordKey">
+            <summary>
+            加密、解密的密钥
+            </summary>
+            user:jyk
+            time:2013/1/23 16:23
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserOneselfInfo.Ticket">
+            <summary>
+            票据。保存生成的加密字符串，作为备案
+            格式：userSSOID_IP_登录时间
+            </summary>
+            user:jyk
+            time:2013/1/23 15:55
+        </member>
+        <member name="T:Nature.Service.SSOAuth.UserSsoOnlineInfo">
+            <summary>
+            用户在SSO端的信息
+            </summary>
+            user:jyk
+            time:2013/1/23 15:54
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoOnlineInfo.UserSsoID">
+            <summary>
+            用户在SSO端的用户ID
+            </summary>
+            user:jyk
+            time:2013/1/23 15:51
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoOnlineInfo.State">
+            <summary>
+            用户的状态。1：正常访问；2：暂停访问；3：不能访问
+            </summary>
+            user:jyk
+            time:2013/1/29 14:16
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoOnlineInfo.UserOneselfInfoKeys">
+            <summary>
+            每个人登录的各自的key的集合，字符串半角逗号分隔
+            </summary>
+            user:jyk
+            time:2013/1/26 9:35
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoOnlineInfo.CodeLoginCount">
+            <summary>
+            同一个账户多少人登录，并且还在线的数量
+            </summary>
+            user:jyk
+            time:2013/4/2 14:13
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoOnlineInfo.UserAppIDDic">
+            <summary>
+            用户在各个网站应用端的用户ID
+            key：WebappID
+            value：用户在网站应用端的ID
+            </summary>
+            user:jyk
+            time:2013/1/26 9:35
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoOnlineInfo.UserName">
+            <summary>
+            用户姓名
+            </summary>
+            user:jyk
+            time:2013/5/22 11:55
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoOnlineInfo.JobNumber">
+            <summary>
+            用户工号
+            </summary>
+            user:jyk
+            time:2013/5/22 11:55
+        </member>
+        <member name="T:Nature.Service.SSOAuth.UserSsoWebappVerifyInfo">
+            <summary>
+            sso和app交换的票据，存放用户ID等信息
+            </summary>
+            user:jyk
+            time:2013/1/23 15:54
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoWebappVerifyInfo.UserGuid">
+            <summary>
+            当前访问用户的临时标识。第一次访问的时候生成Guid用于标识当前访问的用户
+            </summary>
+            <value>
+            第一次访问的时候生成Guid用于标识当前访问的用户
+            </value>
+            user:jyk
+            time:2013/1/23 15:51
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoWebappVerifyInfo.CreateTime">
+            <summary>
+            创建时间，用于判断是否超时失效
+            </summary>
+            user:jyk
+            time:2013/1/23 15:53
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoWebappVerifyInfo.Key">
+            <summary>
+            加密、解密的密钥
+            </summary>
+            user:jyk
+            time:2013/1/23 16:23
+        </member>
+        <member name="P:Nature.Service.SSOAuth.UserSsoWebappVerifyInfo.Ticket">
+            <summary>
+            票据。保存生成的加密字符串，作为备案
+            格式：userSSOID_userAppID_IP_登录时间
+            </summary>
+            user:jyk
+            time:2013/1/23 15:55
+        </member>
+        <member name="T:Nature.Service.SSOAuth.SSOUserOneselfManage">
+            <summary>
+            一个账户多人登录，每个人的自己的标识的管理
+            创建，加入缓存，移除缓存，获取标识
+            </summary>
+            user:jyk
+            time:2013/4/2 10:04
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOneselfManage.Create(System.String,System.Int32,Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            有人登录了，创建一个标识，并且加到字典和缓存
+            </summary>
+            <param name="webAppId">The web app id.</param>
+            <param name="userId">The user id.</param>
+            <param name="ssoLog">The sso log.</param>
+            <returns></returns>
+            user:jyk
+            time:2013/4/2 14:36
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOneselfManage.Add(Nature.Service.SSOAuth.UserOneselfInfo)">
+            <summary>
+            添加一个标识到缓存
+            </summary>
+            <param name="userOneself">自己的标记</param>
+            user:jyk
+            time:2013/4/2 10:08
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOneselfManage.Remove(Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            根据cookie，删除对应的记录
+            </summary>
+            <param name="ssoLog">写日志的标识</param>
+            user:jyk
+            time:2013/4/2 10:08
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOneselfManage.GetGuidKeyByCookie(Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            获取sso的cookie里的用户自己的标识
+            </summary>
+            <param name="ssoLog">写日志的标识</param>
+            <returns></returns>
+            user:jyk
+            time:2013/4/2 10:20
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOneselfManage.GetUserOneselfInfoByCookie(Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            根据cookie获取用户自己的标识
+            </summary>
+            <param name="ssoLog">写日志的标识</param>
+            <returns></returns>
+            user:jyk
+            time:2013/4/2 10:20
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOneselfManage.GetUserOneselfInfoByKey(System.Guid,Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            根据cookie获取用户自己的标识
+            </summary>
+            <param name="key">字典的key </param>
+            <param name="ssoLog">写日志的标识</param>
+            <returns></returns>
+            user:jyk
+            time:2013/4/2 10:20
+        </member>
+        <member name="T:Nature.Service.SSOAuth.SSOUserOnlineManage">
+            <summary>
+            在线用户的管理
+            </summary>
+            user:jyk
+            time:2013/4/2 9:45
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOnlineManage.Add(Nature.Service.SSOAuth.UserOneselfInfo,Nature.Client.SSOLog.SsoLogJson,Nature.Data.DataAccessLibrary)">
+            <summary>
+            添加一个在线用户。如果已经有了，则修改其内容
+            </summary>
+            user:jyk
+            time:2013/4/2 10:41
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOnlineManage.Remove(System.Int32)">
+            <summary>
+            添加一个在线用户。如果已经有了，则修改其内容
+            </summary>
+            user:jyk
+            time:2013/4/2 10:41
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOnlineManage.Get(System.Int32)">
+            <summary>
+            获取指定的用户的在线信息
+            </summary>
+            user:jyk
+            time:2013/4/2 10:41
+        </member>
+        <member name="M:Nature.Service.SSOAuth.SSOUserOnlineManage.CheckUserCodePsw(System.String,System.String,Nature.Data.DalCollection,Nature.Client.SSOLog.SsoLogJson)">
+            <summary>
+            验证用户名密码是否匹配
+            </summary>
+            <param name="userCode">登录账户</param>
+            <param name="userPsw">密码</param>
+            <param name="dal">数据访问函数库的实例集合</param>
+            <param name="ssoLog">写操作日志的实例</param>
+            user:jyk
+            time:2013/4/2 13:51
+        </member>
+        <member name="T:Nature.Service.SSOAuth.ValidateImage">
+            <summary>
+            生成验证码
+            </summary>
+            user:jyk
+            time:2013/1/30 17:07
+        </member>
+        <member name="M:Nature.Service.SSOAuth.ValidateImage.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            生成验证图片核心代码
+            </summary>
+            <param name="context"><see cref="T:System.Web.HttpContext"/> 对象，它提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用。</param>
+            user:jyk
+            time:2013/1/28 14:46
+        </member>
+        <member name="P:Nature.Service.SSOAuth.ValidateImage.IsReusable">
+            <summary>
+            获取一个值，该值指示其他请求是否可以使用 <see cref="T:System.Web.IHttpHandler"/> 实例。
+            </summary>
+        </member>
+    </members>
+</doc>

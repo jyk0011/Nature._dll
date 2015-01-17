@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.Service.UserCenter</name>
+    </assembly>
+    <members>
+        <member name="F:Nature.Service.Permissions.ActionKind.GetModleIDs">
+            <summary>
+            1 获取可以操作的模块ID集合。1,2,3的字符串
+            </summary>
+            user:jyk
+            time:2013/2/2 13:05
+        </member>
+        <member name="F:Nature.Service.Permissions.ActionKind.GetButtonIDs">
+            <summary>
+            2 获取指定模块里可以使用的按钮ID集合。1,2,3的字符串
+            </summary>
+        </member>
+        <member name="F:Nature.Service.Permissions.ActionKind.GetGridColumnIDs">
+            <summary>
+            3 获取指定模块ID和页面视图ID里，可以使用的【数据列表】里的列的ID集合。1,2,3的字符串
+            </summary>
+        </member>
+        <member name="F:Nature.Service.Permissions.ActionKind.GetFindColumnIDs">
+            <summary>
+            4 获取指定模块ID和页面视图ID里，可以使用的【查询】里的字段的ID集合。1,2,3的字符串
+            </summary>
+        </member>
+        <member name="F:Nature.Service.Permissions.ActionKind.GetFormColumnIDs">
+            <summary>
+            5 获取指定模块ID和页面视图ID里，可以使用的【表单】里的字段的ID集合。1,2,3的字符串
+            </summary>
+        </member>
+        <member name="F:Nature.Service.Permissions.ActionKind.GetQuery">
+            <summary>
+            6 获取指定模块ID的读取数据的SQL应该加的查询条件，作为权限过滤条件
+            </summary>
+        </member>
+        <member name="T:Nature.Service.Permissions.PermissionsAuthority">
+            <summary>
+            权限认证，发生信息，判断是否可以使用
+            </summary>
+            user:jyk
+            time:2013/2/5 14:19
+        </member>
+        <member name="T:Nature.Service.Permissions.PermissionsFilter">
+            <summary>
+            权限过滤。可以显示哪些元素，比如功能节点、按钮、列、控件等。
+            </summary>
+            user:jyk
+            time:2013/2/5 14:02
+        </member>
+        <member name="T:Nature.Service.UserCenter.UserCenterHelp">
+            <summary>
+            用户中心服务器端的帮助类库
+            </summary>
+            user:jyk
+            time:2013/3/5 13:42
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserCenterHelp.SaveUserSsoInfoByService(System.Collections.Generic.Dictionary{System.String,System.String},Nature.Service.URLParam,System.String,Nature.Data.DataAccessLibrary,System.String)">
+            <summary>
+            向服务发送用户信息，保存用户信息
+            </summary>
+            <param name="postUserInfo">The post user info.</param>
+            <param name="param">The param.</param>
+            <param name="batch">The batch.</param>
+            <param name="dal">The dal.</param>
+            <param name="operatorID">操作人ID </param>
+            <returns></returns>
+            user:jyk
+            time:2013/3/8 15:17
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserCenterHelp.GetUserIDssoByUserIDappAppID(System.Web.HttpContext,System.String,System.String,Nature.Data.DataAccessLibrary)">
+            <summary>
+            通过userIDapp 和appID获取userIDsso 
+            </summary>
+            <param name="context">The context.</param>
+            <param name="webAppID">网站应用ID</param>
+            <param name="userIDapp">网站应用端的用户ID</param>
+            <param name="dal">数据访问实例</param>
+            <returns></returns>
+            user:jyk
+            time:2013/3/8 15:33
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserCenterHelp.SendRegUserInfo(System.String,System.String,System.String,System.String,System.String,System.String,System.String,Nature.Data.DataAccessLibrary,System.String)">
+            <summary>
+            分发注册信息
+            </summary>
+            <param name="webappID">网站应用ID</param>
+            <param name="userCode">用户名</param>
+            <param name="userLoginName">登录账户</param>
+            <param name="ssoUserID">用户中心端的用户ID </param>
+            <param name="misUserID">开通网站端的用户ID </param>
+            <param name="appUrl">网站应用的网址</param>
+            <param name="batch">批号</param>
+            <param name="dal">数据库访问实例</param>
+            <returns></returns>
+            user:jyk
+            time:2013/3/5 15:17
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserCenterHelp.WriteLog(System.String,System.Int32,System.String,System.String,System.String,Nature.Data.DataAccessLibrary)">
+            <summary>
+            记录操作日志
+            </summary>
+            <param name="title">标题</param>
+            <param name="kind">1：开通账户；2：注册用户</param>
+            <param name="batch">批号</param>
+            <param name="content">日志内容</param>
+            <param name="userID">操作人ID</param>
+            <param name="dal"> </param>
+            <returns></returns>
+            user:jyk
+            time:2013/3/5 13:50
+        </member>
+        <member name="T:Nature.Service.UserCenter.UserService">
+            <summary>
+            用户的相关服务
+            1、接收用户注册信息。 Register 
+            2、分发新注册的用户信息（基本信息） /开通账户
+            3、提供用户信息的最新版本 userNewVersion
+            4、提供用户的全部信息（限用户中心里的）
+            5、验证是否已经有指定的登录账户
+            6、修改登录密码
+            7、修改二次鉴权密码
+            </summary>
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserService.Register(System.Web.HttpContext)">
+            <summary>
+            接收注册信息，放到用户中心数据库，然后分发给其他网站
+            </summary>
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserService.Updatepsw(System.Web.HttpContext,System.String)">
+            <summary>
+             修改登录密码
+            </summary>
+            <param name="context"></param>
+            <param name="pswColName">密码字段名</param>
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserService.UpdateUserState(System.Web.HttpContext)">
+            <summary>
+             修改用户状态——1：可以登录；2：不可以登录；3：暂停；4：锁定
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Nature.Service.UserCenter.UserService.CheckUser(System.Collections.Generic.IList{Nature.DebugWatch.NatureDebugInfo})">
+            <summary>
+            坚持当前访问者是否登录。
+            两种情况：
+            1、登录页面：这个不能检查，所以做个钩子，登录页面重新函数搞定
+            2、其他页面：已登录页面，需要检查了，放在基类里，子类省事了。
+            </summary>
+            <param name="debugInfoList"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,663 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.UI.WebControl.QuickPager</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.UI.WebControl.QuickPager.QuickPager">
+            <summary>
+            分页控件的事件处理
+            PageGetData.cs 负责提取数据
+            PageSQL.cs 负责生成SQl语句
+            PageUI.cs 负责分页控件的页面内容
+            </summary>
+            <summary>
+            分页控件
+            PageGetData.cs 负责提取数据
+            PageSQL.cs 负责生成SQl语句
+            PageUI.cs 负责分页控件的页面内容
+            </summary>
+            <summary>
+            分页控件
+            PageGetData.cs 负责提取数据
+            PageSQL.cs 负责生成SQl语句
+            PageUI.cs 负责分页控件的页面内容
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.QuickPager.EventChange">
+            <summary>
+            事件用
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.QuickPager.EventBind">
+            <summary>
+            事件用
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.QuickPager.EventPreBind">
+            <summary>
+            事件用
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.OnPageChange(System.Object,Nature.UI.WebControl.QuickPager.PageArgs)">
+            <summary>
+            用户单击页号后，触发的事件，在绑定显示数据的控件之前触发
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.OnGridBinded(System.Object,Nature.UI.WebControl.QuickPager.PageArgs)">
+            <summary>
+            在绑定数据显示控件之后触发
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.OnPreGridBind(System.Object,Nature.UI.WebControl.QuickPager.PageArgs)">
+            <summary>
+            在提取数据后，绑定数据显示控件之前触发
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.RaisePostBackEvent(System.String)">
+            <summary>
+            分页控件的回发事件 
+            </summary>
+            <param name="pageIndex">要翻到的页号</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.PagerClick(System.Int32)">
+            <summary>
+            响应分页事件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.ComputeRecordCount">
+            <summary>
+            计算总记录数，和页数
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.BindFirstPage">
+            <summary>
+            显示第一页的数据，可以用于添加记录
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.BindThisPageForAddDelete">
+            <summary>
+            显示当前页的数据，重新计算记录数，可以用于添加、删除数据
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.BindThisPage">
+            <summary>
+            显示当前页的数据，不重新计算记录数，可以用于修改记录
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.SetPagerUI">
+            <summary>
+            自定义获取数据的时候，或者使用URL分页的时候，重新显示PagerUI的时候调用的函数。
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.DataBind(System.Int32,Nature.UI.WebControl.QuickPager.PageArgs)">
+            <summary>
+            绑定控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.DataBind(System.Web.UI.Control,System.ComponentModel.MarshalByValueComponent)">
+            <summary>
+            绑定显示数据的控件
+            </summary>
+            <param name="control">显示数据的控件</param>
+            <param name="dt">数据源，目前只支持DataTable和DataSet</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.GetDataTable">
+            <summary>
+            获取当前页的记录集，用DataTable装载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.GetWebList2(Nature.Data.Model.WebList2Format)">
+            <summary>
+            获取当前页的记录集，用WebList2装载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.SetSql">
+            <summary>
+            SQL 语句的初始化
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.QuickPager._Dal">
+            <summary>
+            访问数据库用的实例
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.QuickPager._pagerSql">
+            <summary>
+            生成SQL语句的部分
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.QuickPager._pagerUI">
+            <summary>
+            提取数据的部分
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.CreateChildControls">
+            <summary>
+            绘制UI
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.SetOnIt">
+            <summary>
+            根据分页方式，做初始化设置
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.QuickPager.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            设计时支持
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="E:Nature.UI.WebControl.QuickPager.QuickPager.PageChanged">
+            <summary>
+            用户单击页号后，触发的事件，在绑定显示数据的控件之前触发
+            </summary>
+        </member>
+        <member name="E:Nature.UI.WebControl.QuickPager.QuickPager.GridBinded">
+            <summary>
+            用户单击页号后，并且绑定显示数据的控件之后触发
+            </summary>
+        </member>
+        <member name="E:Nature.UI.WebControl.QuickPager.QuickPager.PreGridBind">
+            <summary>
+            用户单击页号后，并且绑定显示数据的控件之后触发
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.Dal">
+            <summary>
+            访问数据库用的实例
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.ShowDataControl">
+            <summary>
+            设置显示数据的控件
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.ShowDataControlIDs">
+            <summary>
+            显示数据的控件ID
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.UserControl">
+            <summary>
+            在用户控件里面使用的时候，需要设置。
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PagerTurnKind">
+            <summary>
+            分页控件采用的分页方式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PagerRunKind">
+            <summary>
+            分页控件采用的运行方式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.IsBindControl">
+            <summary>
+            分页控件采用的数据提取方式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.RecordCount">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.IsSetRecordCount">
+            <summary>
+            直接设置总记录数，true：直接设置记录数；false：需要到数据库里面统计
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageSize">
+            <summary>
+            一页的记录数
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageIndex">
+            <summary>
+            当前的页号
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.UrlRewritePattern">
+            <summary>
+             URL重写时需要设置，显示的网页名称。
+             比如：list{0}.aspx
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.CssClass">
+            <summary>
+            设置默认的css样式名
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.Skin">
+            <summary>
+            设置
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUIPrev">
+            <summary>
+            上一页
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUINext">
+            <summary>
+            下一页
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUIFirst">
+            <summary>
+            首页 
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUILast">
+            <summary>
+            末页
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUIGO">
+            <summary>
+            GO 去指定页号 的文字
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.NaviCount">
+            <summary>
+            页面导航的数量
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUIAllCount">
+            <summary>
+            共{0}条记录
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUIAllPage">
+            <summary>
+            第{0}/{1}页
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PageUIPageSize">
+            <summary>
+            每页{0}条记录
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.PagerSql">
+            <summary>
+            分页算法的实例
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPager.QuickPager.ManagerPageUI">
+            <summary>
+            分页方式的实例
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.QuickPager.EventPageChange">
+            <summary>
+            定一个委托，翻页的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerTurnKind">
+            <summary>
+            分页控件的分页方式
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerTurnKind.PostBack">
+            <summary>
+            PostBack方式分页
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerTurnKind.PostBackURL">
+            <summary>
+            伪URL分页Postback版。 
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerTurnKind.URL">
+            <summary>
+            URL的方式分页
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerTurnKind.URLRewriter">
+            <summary>
+            URL 重写的方式
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerTurnKind.JS">
+            <summary>
+            触发js事件的方式分页。暂未实现功能 
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerTurnKind.Ajax">
+            <summary>
+            XMLHttp的方式分页，json格式传递数据。暂未实现功能
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerTurnKind.AjaxForWebControl">
+            <summary>
+            XMLHttp的方式分页，for 服务器控件 。
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerRunKind">
+            <summary>
+            分页控件的运行方式
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerRunKind.Auto">
+            <summary>
+            自动，好比全自动洗衣机，加水、浸泡、洗涤、漂洗、甩干、烘干，自动运行。
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerRunKind.Customer">
+            <summary>
+            手动，自行设置如何获取数据、如何绑定控件等。
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.DataSourceKind">
+            <summary>
+            数据载体类型
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.DataSourceKind.DataTable">
+            <summary>
+            提取数据到DataTable
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.DataSourceKind.WebList1">
+            <summary>
+            提取数据到WebList1，无需反射
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.DataSourceKind.WebList2">
+            <summary>
+            提取数据到WebList2，无需反射
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.DataSourceKind.Entity">
+            <summary>
+            提取数据到任意实体类。通过反射填充属性值。暂未实现
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PageArgs">
+            <summary>
+            分页控件用的参数
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PageArgs.OldPageIndex">
+            <summary>
+            翻页前的页号，不知道这个有没有用
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PageArgs.CurrentPageIndex">
+            <summary>
+            想要翻到的页号
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerUI.PageUI">
+            <summary>
+            负责绘制分页控件的显示内容
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.MyPager">
+            <summary>
+            分页控件的实例，在产生PageUI的实例的时候设置。
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.#ctor(Nature.UI.WebControl.QuickPager.QuickPager)">
+            <summary>
+            初始化，设置分页控件的实例
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.AddPageUI">
+            <summary>
+            添加UI的步骤，以后需要灵活处理
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.AddPageDataInfo">
+            <summary>
+            添加记录数等的显示
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.AddPagePrev">
+            <summary>
+            添加首页、上一页 
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.AddPageNext">
+            <summary>
+            添加下一页、末页、GO
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.GetGoText(System.Text.StringBuilder,System.Web.UI.HtmlControls.HtmlInputText)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <param name="txt"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.AddPageNavi">
+            <summary>
+            navigation
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.GetNavi">
+            <summary>
+            生成导航的html
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.UpdatePageUI">
+            <summary>
+            修改UI
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.UpdatePageDataInfo">
+            <summary>
+            修改记录数等的显示
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.UpdatePageText">
+            <summary>
+            修改首页、上一页、下一页、末页
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.UpdatePageNavi">
+            <summary>
+            navigation
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.GetAHref(System.String)">
+            <summary>
+            获取a 的 href 和 calss 属性。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.GetURL">
+            <summary>
+            获取获取URL和参数，参数里去掉page=。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.WriteGoJS">
+            <summary>
+            输出URL分页里go的js函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PageUI.WritePageJS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerUI.AjaxForWebControl">
+            <summary>
+            ajax for服务器控件。
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.AjaxForWebControl.#ctor(Nature.UI.WebControl.QuickPager.QuickPager)">
+            <summary>
+            基于服务器控件的Ajax
+            </summary>
+            <param name="pager"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerUI.AjaxForWebControl._myHref">
+            <summary>
+            保存 a标签的属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.AjaxForWebControl.GetAHref(System.String)">
+            <summary>
+            设置a标签
+            </summary>
+            <param name="pageIndex">页号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.AjaxForWebControl.GetURL">
+            <summary>
+            获取获取URL和参数，参数里去掉page=。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerUI.JS">
+            <summary>
+            一种简单的，触发js事件的方式。只是现在还没有实现功能。
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.JS.#ctor(Nature.UI.WebControl.QuickPager.QuickPager)">
+            <summary>
+            触发js事件的分页方式
+            </summary>
+            <param name="pager"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerUI.JS._myHref">
+            <summary>
+            保存 a标签的属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.JS.GetAHref(System.String)">
+            <summary>
+            设置a标签
+            </summary>
+            <param name="pageIndex">页号</param>
+            <returns></returns>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerUI.PostBack">
+            <summary>
+            PostBack分页方式里的 a 的 href 属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PostBack.#ctor(Nature.UI.WebControl.QuickPager.QuickPager)">
+            <summary>
+            PostBack的分页方式
+            </summary>
+            <param name="pager"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerUI.PostBack._myHref">
+            <summary>
+            保存 a标签的属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PostBack.GetAHref(System.String)">
+            <summary>
+            设置a标签
+            </summary>
+            <param name="pageIndex">页号</param>
+            <returns></returns>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerUI.PostBackURL">
+            <summary>
+            本质是PostBack分页，但是要伪装成URL分页，以便于搜索引擎。
+            PostBack分页方式里的 a 的 href 属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PostBackURL.#ctor(Nature.UI.WebControl.QuickPager.QuickPager)">
+            <summary>
+            伪URL分页，Postback版
+            </summary>
+            <param name="pager"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerUI.PostBackURL._myHref">
+            <summary>
+            保存 a标签的属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.PostBackURL.GetAHref(System.String)">
+            <summary>
+            设置a标签
+            </summary>
+            <param name="pageIndex">页号</param>
+            <returns></returns>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerUI.URL">
+            <summary>
+            URL 分页
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.URL.#ctor(Nature.UI.WebControl.QuickPager.QuickPager)">
+            <summary>
+            URL 分页
+            </summary>
+            <param name="pager"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerUI.URL._myHref">
+            <summary>
+            保存 a标签的属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.URL.GetAHref(System.String)">
+            <summary>
+            URL里获取a的href
+            </summary>
+            <param name="pageIndex">页号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.URL.GetGoText(System.Text.StringBuilder,System.Web.UI.HtmlControls.HtmlInputText)">
+            <summary>
+            设置Go的样子
+            </summary>
+            <param name="str"></param>
+            <param name="txt"></param>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPager.PagerUI.URLRewriter">
+            <summary>
+            URL 重写
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.URLRewriter.#ctor(Nature.UI.WebControl.QuickPager.QuickPager)">
+            <summary>
+            URL 重写
+            </summary>
+            <param name="pager"></param>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPager.PagerUI.URLRewriter._myHref">
+            <summary>
+            保存 a标签的属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.URLRewriter.GetAHref(System.String)">
+            <summary>
+            设置a的href
+            </summary>
+            <param name="pageIndex">页号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPager.PagerUI.URLRewriter.GetGoText(System.Text.StringBuilder,System.Web.UI.HtmlControls.HtmlInputText)">
+            <summary>
+            Go的样子
+            </summary>
+            <param name="str"></param>
+            <param name="txt"></param>
+        </member>
+    </members>
+</doc>

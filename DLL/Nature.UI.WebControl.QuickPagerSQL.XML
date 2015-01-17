@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.UI.WebControl.QuickPagerSQL</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind">
+            <summary>
+            分页控件采用的分页算法
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind.Auto">
+            <summary>
+            自动，跟随基类里的设置
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind.RowNumber">
+            <summary>
+            SQL Server2005的Row_Number
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind.TableVar">
+            <summary>
+            表变量
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind.MaxMin">
+            <summary>
+            Max
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind.TopTop">
+            <summary>
+            颠倒Top
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind.MaxTableVar">
+            <summary>
+            Max、表变量自动切换
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind.MaxTopTop">
+            <summary>
+            Max、颠倒Top自动切换
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPagerSQL.PagerSQLFunction">
+            <summary>
+            生成分页的方式提取数据的SQL语句，可以选择不同的分页算法
+            这个是基类，各种分页算法比较公用的部分
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQLFunction.MyPagerSql">
+            <summary>
+            通过它来调用属性
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQLFunction.CreateRecordCountSQL">
+            <summary>
+            生成统计记录数的SQL语句
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQLFunction.CreateFirstPageSQL">
+            <summary>
+            生成首页的SQL语句
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQLFunction.CreateNextPageSQL">
+            <summary>
+            生成任意页的SQL语句的模版，分页算法不同，区别也很大，所以这里就不实现了。
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQLFunction.CreateLastPageSQL">
+            <summary>
+            最后一页的SQL语句。依据算法而定，不是所有的情况都需要实现
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQLFunction.GetSQLByPageIndex(System.Int32)">
+            <summary>
+            传入页号，返回指定页号的SQL语句
+            </summary>
+            <param name="pageIndex">页号</param>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPagerSQL.PagerSQL">
+            <summary>
+            QuickPagerSQL 根据表名、字段名、排序字段等信息，生成各种分页算法。
+            记录属性，表名、字段名、排序字段、分页模板等。
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQL._myViewState">
+            <summary>
+            内部的保存属性的容器
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.SaveKeyWebconfig">
+            <summary>
+            加密用的密钥,空字符串的话,表示不加密
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQL._saveKey">
+            <summary>
+            单独的密钥
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.QuickPagerSQL.PagerSQL._sqlFunction">
+            <summary>
+            生成分页用的SQL语句的函数库
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.SetSQLFunction(Nature.UI.WebControl.QuickPagerSQL.PagerSQLKind)">
+            <summary>
+            获取分页算法的实例
+            </summary>
+            <param name="sqlKind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.#ctor">
+            <summary>
+            初始化，设置存放属性值的位置，和密钥
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.GetSQLByPageIndex(System.Int32)">
+            <summary>
+            传入页号，返回指定页号的SQL语句
+            </summary>
+            <param name="pageIndex">页号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.ComputePageCount">
+            <summary>
+            通过总记录数、一页的记录数计算页数
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.CreateSQL">
+            <summary>
+            调用函数，拼接需要的SQL语句
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.Page">
+            <summary>
+            没有办法的办法，笨着，操作隐藏域和加载事件用
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.SaveLocation">
+            <summary>
+            读取或者设置保存属性的位置，可以选择不保存。
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.SaveKey">
+            <summary>
+            读取或者设置密钥，空字符串表示不加密，null表示采用默认密钥。
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.SetPagerSQLKind">
+            <summary>
+            设置分页算法，必须先设置排序字段。
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.TableName">
+            <summary>
+            表名、视图名
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.TablePKColumn">
+            <summary>
+            表的主键字段名称
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.TableShowColumns">
+            <summary>
+            显示的字段
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.TableOrderByColumns">
+            <summary>
+            排序字段，可以设置多个排序字段，可以设置升降序，比如col1 desc,col2,col3 desc 
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.TableQuery">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.TableQueryAlways">
+            <summary>
+            固定的查询条件，设置了就一直有效
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.GetRecordCountSQL">
+            <summary>
+            生成统计记录数的SQL语句
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.GetFirstPagerSQL">
+            <summary>
+            第一页的分页算法模版
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.GetNextPagerSQL">
+            <summary>
+            指定页号的分页算法模版
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.GetLastPagerSQL">
+            <summary>
+            最后一页的分页算法模版
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.RecordCount">
+            <summary>
+            总记录记录数
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.PageSize">
+            <summary>
+            一页的记录数
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.PageCount">
+            <summary>
+            一共有多少页，根据总记录数和一页的记录数自动计算
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.QuickPagerSQL.PagerSQL.PageIndex">
+            <summary>
+            当前的页号
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPagerSQL.SQLMinMax">
+            <summary>
+            Max分页算法
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPagerSQL.SQLRowNumber">
+            <summary>
+            Row_Number的分页算法
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPagerSQL.SQLTableVar">
+            <summary>
+            基于表变量的分页算法
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.QuickPagerSQL.SQLTopTop">
+            <summary>
+            颠倒Top（Top嵌套）的分页算法
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.SQLTopTop.TopTopInit(System.String,System.String)">
+            <summary>
+            处理排序字段
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.SQLTopTop.CreateNextPageSQL">
+            <summary>
+            生成下一页的SQL语句
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.SQLTopTop.CreateLastPageSQL">
+            <summary>
+            TopTop颠倒法的最后一页的SQL语句，一是提高效率，一是修改了最后一页总是显示PageSize条记录的bug
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.QuickPagerSQL.SQLTopTop.GetSQLByPageIndex(System.Int32)">
+            <summary>
+            重写父类的获取分页用的SQL语句的函数，判断是否是最后一页
+            </summary>
+            <param name="pageIndex">页号，从1开始计数</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

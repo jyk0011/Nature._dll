@@ -1,0 +1,919 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nature.UI.WebControl.BaseControl</name>
+    </assembly>
+    <members>
+        <member name="T:Nature.UI.WebControl.BaseControl.Dictionary.DictionaryControl">
+            <summary>
+            通过管理存放控件类型的字典
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.Dictionary.DictionaryControl._dicFormControls">
+            <summary>
+            表单用的控件类型
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.Dictionary.DictionaryControl.DicFindControls">
+            <summary>
+            查询用的控件类型
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.Dictionary.DictionaryControl.GetDicFormControls">
+            <summary>
+            加载 生成表单控件的“实例方法”
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.Dictionary.DictionaryControl.GetDicFindControls">
+            <summary>
+            加载 生成查询控件的“实例方法”
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.Dictionary.DictionaryControl.LoadFormControl">
+            <summary>
+             加载表单用的子控件的类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.Dictionary.DictionaryControl.LoadFindControl">
+            <summary>
+             加载查询用的子控件的类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.ListHelp">
+            <summary>
+            列表框自我描绘的一个帮助
+            可以设置Item和宽度
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.ListHelp.SetList(System.Web.UI.WebControls.ListControl,Nature.UI.IFillItemHelp,Nature.MetaData.ControlExtend.BaseListExpand,Nature.Data.IDal)">
+            <summary>
+            设置下拉列表框的选项
+            </summary>
+            <param name="list">列表框控件</param>
+            <param name="fillItem">填充Item的一个接口</param>
+            <param name="info">列表框的特殊属性信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.MyCheckBox">
+            <summary>
+            CheckBox
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBox.GetControlValue(System.String)">
+            <summary>
+            返回 
+            </summary>
+            <param name="kind">取值的方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBox.SetControlValue(System.String,System.String)">
+            <summary>
+            给Text赋值
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBox.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，复选框2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBox.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyCheckBox.ControlValue">
+            <summary>
+            实现接口，SelectedValue
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyCheckBox.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList">
+            <summary>
+            CheckBoxList
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList._dataType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.OnInit(System.EventArgs)">
+            <summary>
+            初始化
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.GetSelectedItemValue">
+            <summary>
+            获取选中的选项的Value值。多选，1,2,3的形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.GetSelectedItemText">
+            <summary>
+            获取选中的选项的Value值。多选，1,2,3的形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.SetSelectedByValue(System.String)">
+            <summary>
+            通过Value设置选项
+            </summary>
+            <param name="itemValue"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.SetSelectedByText(System.String)">
+            <summary>
+            通过Text设置选项
+            </summary>
+            <param name="itemText">Text</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.GetControlValue(System.String)">
+            <summary>
+            返回 
+            </summary>
+            <param name="kind">取值的方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.SetControlValue(System.String,System.String)">
+            <summary>
+            给Text赋值
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，复选组2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.BindListBySql(System.String,Nature.Data.IDal)">
+            <summary>
+            从数据库绑定控件
+            </summary>
+            <param name="sql">提取数据的SQL语句</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.ItemAddByString(System.String)">
+            <summary>
+            字符串填充
+            </summary>
+            <param name="valuesAndTexts"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.ItemAddByString(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <param name="texts"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.ItemAddByArray(System.String[],System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <param name="texts"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.ItemAddByArray(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="valuesAndTexts"></param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.CheckDataReg">
+            <summary>
+            验证用的正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.CheckErrorMessage">
+            <summary>
+            未通过验证的时候的提示信息
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.CheckDataType">
+            <summary>
+            验证类型，通过设置验证类型，转换成正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.ControlValue">
+            <summary>
+            实现接口，SelectedValue
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyCheckBoxList.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.MyDropDownList">
+            <summary>
+            集成.net 里的DropDownList，加几个属性和接口
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.List.MyDropDownList._dataType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.SetSelectedByValue(System.String)">
+            <summary>
+            通过Value设置选项
+            </summary>
+            <param name="itemValue"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.SetSelectedByText(System.String)">
+            <summary>
+            通过Text设置选项
+            </summary>
+            <param name="itemText">Text</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.GetControlValue(System.String)">
+            <summary>
+            kind："1"：返回SelectedValue；"11"：返回SelectedItem.Text 
+            </summary>
+            <param name="kind">取值的方式。"1"：返回SelectedValue；"11"：返回SelectedItem.Text</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.SetControlValue(System.String,System.String)">
+            <summary>
+            设置选项
+            </summary>
+            <param name="value"></param>
+            <param name="kind">1：通过value设置选项；2：通过Text设置选项</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，下拉列表框2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.BindListBySql(System.String,Nature.Data.IDal)">
+            <summary>
+            从数据库绑定控件
+            </summary>
+            <param name="sql"></param>
+            <param name="dal">数据访问函数库的实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ItemAddByString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="valuesAndTexts"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ItemAddByString(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <param name="texts"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ItemAddByArray(System.String[],System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <param name="texts"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ItemAddByArray(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="valuesAndTexts"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ItemAddMonth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ItemAddDate(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lastDay"></param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyDropDownList.CheckDataReg">
+            <summary>
+            验证用的正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyDropDownList.CheckErrorMessage">
+            <summary>
+            未通过验证的时候的提示信息
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyDropDownList.CheckDataType">
+            <summary>
+            验证类型，通过设置验证类型，转换成正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ControlValue">
+            <summary>
+            实现接口，SelectedValue
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyDropDownList.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.MyListBox">
+            <summary>
+            ListBox
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListBox.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListBox.GetControlValue(System.String)">
+            <summary>
+            返回 
+            </summary>
+            <param name="kind">取值的方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListBox.SetControlValue(System.String,System.String)">
+            <summary>
+            给Text赋值
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListBox.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，下拉框2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListBox.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListBox.BindListBySql(System.String,Nature.Data.IDal)">
+            <summary>
+            从数据库绑定控件
+            </summary>
+            <param name="sql"></param>
+            <param name="dal">数据访问函数库的实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListBox.ItemAddByString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="valuesAndTexts"></param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyListBox.ControlValue">
+            <summary>
+            实现接口，SelectedValue
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyListBox.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.MyListPerson">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyListPerson.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyListPerson.ControlValue">
+            <summary>
+            实现接口，SelectedValue
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList">
+            <summary>
+            继承RadioButtonList
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.OnInit(System.EventArgs)">
+            <summary>
+            设置css名称和DataValueField、DataTextField
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.SetSelectedByValue(System.String)">
+            <summary>
+            通过Value设置选项
+            </summary>
+            <param name="itemValue"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.SetSelectedByText(System.String)">
+            <summary>
+            通过Text设置选项
+            </summary>
+            <param name="itemText">Text</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.GetControlValue(System.String)">
+            <summary>
+            返回 
+            </summary>
+            <param name="kind">取值的方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.SetControlValue(System.String,System.String)">
+            <summary>
+            给Text赋值
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，单选组2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.BindListBySql(System.String,Nature.Data.IDal)">
+            <summary>
+            通过SQL语句绑定控件
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.ItemAddByString(System.String)">
+            <summary>
+            通过字符串，填充Item
+            </summary>
+            <param name="valuesAndTexts"></param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.CheckDataReg">
+            <summary>
+            验证用的正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.CheckErrorMessage">
+            <summary>
+            未通过验证的时候的提示信息
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.CheckDataType">
+            <summary>
+            验证类型，通过设置验证类型，转换成正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.ControlValue">
+            <summary>
+            实现接口，SelectedValue
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyRadioButtonList.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.List.MyUniteList">
+            <summary>
+            多级联动下拉列表框
+            </summary>
+            <summary>
+            多级联动下拉列表框
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.DataBind">
+            <summary>
+            绑定控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.BindList">
+            <summary>
+            绑定下拉列表框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.BindListPostBack">
+            <summary>
+            在回发的时候，绑定下拉列表框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.SetSelectedValue(System.String)">
+            <summary>
+            设置默认选项
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.WriteJsArray">
+            <summary>
+            输出js数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.SetTextBox">
+            <summary>
+            添加子控件——文本框，利用文本框保存选择的下拉列表框的选项
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.SetControlKind(System.String)">
+            <summary>
+            设置控件的状态，复选组2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.GetControlValue(System.String)">
+            <summary>
+            获取下拉列表框的value
+            </summary>
+            <param name="kind">取值的方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.SetControlValue(System.String,System.String)">
+            <summary>
+            设置下拉列表框的选项
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，复选组2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.List.MyUniteList.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            设计时支持
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyUniteList.ListCount">
+            <summary>
+            几级联动。最小是2；最大——理论上是不限的。
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyUniteList.ListHtml">
+            <summary>
+            分隔列表框的用的html代码 —— ListHTML
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyUniteList.SelectedValue">
+            <summary>
+            获取、设置下拉列表的ID值。
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyUniteList.SelectedText">
+            <summary>
+            获取下拉列表的Text值
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyUniteList.DataSource">
+            <summary>
+            获取、设置下拉列表的记录集。
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyUniteList.ControlValue">
+            <summary>
+            实现接口，获取、设置下拉列表框的value
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.List.MyUniteList.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.TextBox.CheckType">
+            <summary>
+            几个常用的验证方式
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.CheckType.NotCheck">
+            <summary>
+            不验证
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.CheckType.NaturalNumber">
+            <summary>
+            自然数
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.CheckType.Integer">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.CheckType.Decimal">
+            <summary>
+            小数
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.CheckType.DateTime">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.CheckType.Required">
+            <summary>
+            必填
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox">
+            <summary>
+            继承.net 里的TextBox，加几个属性和接口
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.OnInit(System.EventArgs)">
+            <summary>
+            设置文本框的css属性
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.GetControlValue(System.String)">
+            <summary>
+            返回Text.Trim().Replace("'", "")
+            </summary>
+            <param name="kind">取值的方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.SetControlValue(System.String,System.String)">
+            <summary>
+            给Text赋值
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.SetControlState(System.String)">
+            <summary>
+            设置控件的状态
+            1：正常
+            2：只读
+            3：不可用
+            </summary>
+            <param name="kind">1：正常；2：只读；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            自我描述
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.TextTrim">
+            <summary>
+            获取Text.Trim()
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.TextTrimNone">
+            <summary>
+            获取Text.Trim().Replace("'", "''")，避免注入攻击
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.CheckDataReg">
+            <summary>
+            验证用的正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.CheckErrorMessage">
+            <summary>
+            未通过验证的时候的提示信息
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.CheckDataType">
+            <summary>
+            验证类型，通过设置验证类型，转换成正则表达式
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.ControlValue">
+            <summary>
+            实现接口，设置Text属性，返回Text.Trim()
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.BaseTextBox.ControlKind">
+            <summary>
+            实现接口，返回控件类别
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.TextBox.MyTextBox">
+            <summary>
+            继承MyTextBox，单行文本框、多行文本框、密码框
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextBox.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            描述单行文本框、多行文本框和密码框
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxDateTime">
+            <summary>
+            继承BaseTextBox，和My97DatePicker结合，实现日期、时间的选择
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxDateTime.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            显示选择日期的My97DatePicker
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxDateTime.ControlKind">
+            <summary>
+            实现接口，返回控件类别
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxDateTime.ControlValue">
+            <summary>
+            控件值
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo">
+            <summary>
+            继承WebControl，显示一个或者两个文本框，查询的时候使用，比如：从____ 到 _____
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo.CreateChildControls">
+            <summary>
+            创建两个文本框，为时间段这类的查询作准备
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo.GetControlValue(System.String)">
+            <summary>
+            返回Text.Trim().Replace("'", "")
+            </summary>
+            <param name="kind">取值的方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo.SetControlValue(System.String,System.String)">
+            <summary>
+            给Text赋值
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，下拉列表框框2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            显示一个或者两个文本框，查询的时候使用
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo.ControlValue">
+            <summary>
+            实现接口，设置Text属性，返回Text.Trim().Replace("'", "")
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.MyTextBoxTwo.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose">
+            <summary>
+            文本框形式，单击文本框，打开新窗口，选择记录，保存记录ID，同时显示记录的文本
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose._txtText">
+            <summary>
+            记录文本内容
+            </summary>
+        </member>
+        <member name="F:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose._txtID">
+            <summary>
+            记录ID
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose.CreateChildControls">
+            <summary>
+            创建控件
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose.GetControlValue(System.String)">
+            <summary>
+            根据kind返回对应值
+            </summary>
+            <param name="kind">取值的方式
+            1：返回ID
+            2：返回Text
+            3：返回ID ~ Text
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose.SetControlValue(System.String,System.String)">
+            <summary>
+            给Text赋值
+            </summary>
+            <param name="value"></param>
+            <param name="kind"></param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose.SetControlState(System.String)">
+            <summary>
+            设置控件的状态，复选组2、3都表示不可用
+            </summary>
+            <param name="kind">1：正常；2：不可用；3：不可用</param>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            显示两个文本框，单击第一个文本框可以打开一个窗口选择记录，然后把选择的ID记录到第二个文本框。
+            第一个文本框显示文字形式的内容。
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose.ControlValue">
+            <summary>
+            实现接口，设置Text属性，返回Text.Trim().Replace("'", "")
+            </summary>
+        </member>
+        <member name="P:Nature.UI.WebControl.BaseControl.TextBox.MyTextChoose.ControlKind">
+            <summary>
+            实现接口
+            </summary>
+        </member>
+        <member name="T:Nature.UI.WebControl.BaseControl.TextBox.MyTextUpLoad">
+            <summary>
+            继承MyTextBox，上传文件、图片的文本框
+            </summary>
+        </member>
+        <member name="M:Nature.UI.WebControl.BaseControl.TextBox.MyTextUpLoad.ShowMe(Nature.MetaData.Entity.IColumn,Nature.Data.IDal,System.Boolean)">
+            <summary>
+            描述上传文件、图片的文本框
+            </summary>
+            <param name="formColumnMeta">配置信息</param>
+            <param name="dal">数据访问函数库的实例</param>
+            <param name="isForm">True：表单控件；False：查询控件</param>
+        </member>
+    </members>
+</doc>
